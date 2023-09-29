@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.nav {
+  min-height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  margin: 0 0 0 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255,1);
+  position: fixed;
+  .MuiDrawer-paperAnchorTop{
+    height: 1000px;
+  }
+}
+
+.dropDownButton{
+  margin: 0 20px 0 0;
+  border: none;
+  background-color: transparent;
+  width: fit-content;
+  height: fit-content;
+}
+
+.Navigation{
+  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  .dropDownButton{
+    justify-self: end;
+    margin-top: 20px;
+  }
+  .navLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    a{
+      text-decoration: none;
+      &:visited {
+        color: black;
+      }
+    }
+    .navLink {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-top: 5px;
+      &:visited {
+        color: black;
+      }
+    }
+  }
+}
+
+
+
