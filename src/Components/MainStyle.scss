@@ -5,6 +5,7 @@ main{
   background-image: url("../Images/MainBanner.jpg");
   background-origin: border-box;
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
