@@ -25,11 +25,10 @@ $clr-5:rgb(52, 55, 66);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   margin: 0 0 0 0;
   padding: 0 15px;
-  background-color: rgba(255, 255, 255,1);
   position: fixed;
   height: 50px;
+  background-color: $clr-1;
 }
-
 .dropDownButton{
   margin: 0 20px 0 0;
   border: none;
@@ -46,7 +45,8 @@ $clr-5:rgb(52, 55, 66);
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 90%;
+  height: 100%;
+  padding-bottom: 10%;
   background-color: $clr-1;
   .contacts {
     width: 100%;
