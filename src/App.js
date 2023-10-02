@@ -3,7 +3,7 @@ import React from "react";
 import { Route, Routes} from "react-router-dom";
 
 import Header from "./Components/Header/Header";
-import Main from "./Components/Main";
+import Main from "./Components/MainPage/Main";
 import Something from "./Components/Something";
 import About from "./Components/About";
 

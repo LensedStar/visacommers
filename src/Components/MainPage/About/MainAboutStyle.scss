@@ -1,0 +1,23 @@
+.about{
+  margin-top: 100px;
+  height: auto;
+  width: 100%;
+  display:grid;
+  grid-template-rows: repeat(3,1fr);
+  .aboutText{
+    border-radius: 10px;
+    background-color: rgb(195,227,226);
+    padding: 20px 20px;
+    margin: 0 0 40px 0;
+    width: 90%;
+
+  }
+  .aboutText1{
+    justify-self: end;
+
+  }
+  .aboutText2{
+    justify-self: start;
+
+  }
+}
