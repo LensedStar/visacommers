@@ -8,9 +8,13 @@ import Button from "../Button/Button";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import {faArrowDown} from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+
+import {motion} from "framer-motion";
+
+import {Link} from "react-scroll"
 export default function Main() {
     const {t} = useTranslation();
     return(
@@ -23,10 +27,23 @@ export default function Main() {
             <Button content={t("navigation.apply")} style={
                 {width: "300px",
                 height: "50px"}
-            } />
-            <span className="arrow">
-                <FontAwesomeIcon icon={faArrowDown} size="2xl" style={{color: "#ffffff"}} />
-            </span>
+            } classN={"titleButton"}
+            />
+            <motion.div
+                className="arrow"
+                animate={{
+                    y:-20
+                }}
+                transition={{
+                    duration:.8,
+                    repeat:Infinity,
+                    repeatType:"reverse",
+                    ease:"easeInOut"
+                }}
+            ><Link to="mainAbout"  smooth={true} offset={-40} duration={500} >
+                <FontAwesomeIcon icon={faArrowDown} size="2xl" style={{color: "#ffffff"}}  />
+            </Link>
+            </motion.div>
         </main>
             <MainAbout />
         </>

@@ -9,7 +9,7 @@ import "./MainAboutStyle.scss";
 export default function MainAbout() {
 const {t} = useTranslation();
     return(
-        <div className="about">
+        <div className="about" id="mainAbout">
                 <motion.div
                     key={1}
                     className="aboutText aboutText1"
