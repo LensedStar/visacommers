@@ -57,7 +57,8 @@ export default function Header() {
                             <FontAwesomeIcon icon={faEnvelope} size="lg"/>
                             <a href = "mailto: abc@example.com">adc@example.com</a>
                         </span>
-                        <Button content={t("navigation.apply")} style={{alignSelf : "center"}} />
+                        <Button content={t("navigation.apply")} style={{alignSelf : "center",
+                        marginTop:"40px"}} />
                     </article>
                 </div>
             </Drawer>
