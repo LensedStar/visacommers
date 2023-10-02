@@ -53,7 +53,7 @@ const {t} = useTranslation();
             >
                 <h2>{t("mock.title")}</h2>
                 <p>
-                    {t("mock.description-long")}
+                    {t("mock.description-short")}
                 </p>
             </motion.div>
 
