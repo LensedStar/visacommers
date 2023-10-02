@@ -23,7 +23,6 @@ export default function MainAbout() {
                     }}
                     transition={{
                         duration:1,
-                        delay:1,
                     }}
                     viewport={{once:false}}
                 >
@@ -50,7 +49,7 @@ export default function MainAbout() {
                 }}
                 transition={{
                     duration:1,
-                    delay:1.2,
+                    delay:.5,
                 }}
                 viewport={{once:false}}
             >
