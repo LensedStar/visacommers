@@ -71,7 +71,7 @@ const {t} = useTranslation();
                 }}
                 transition={{
                     duration:1,
-                    delay:.5,
+                    delay:.2,
                 }}
                 viewport={{once:true}}
             >
