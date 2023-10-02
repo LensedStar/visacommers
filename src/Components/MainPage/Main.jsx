@@ -15,6 +15,8 @@ import { useTranslation } from "react-i18next";
 import {motion} from "framer-motion";
 
 import {Link} from "react-scroll"
+
+import WhoBlock from "./WhoBlockMain/WhoBlock";
 export default function Main() {
     const {t} = useTranslation();
     return(
@@ -46,6 +48,7 @@ export default function Main() {
             </motion.div>
         </main>
             <MainAbout />
+            <WhoBlock />
         </>
     )
 }

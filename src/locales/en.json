@@ -6,11 +6,13 @@
     "apply":"Apply now"
   },
   "main": {
-    "title": "Visa in Slovenia"
+    "title": "Visa in Slovenia",
+    "forWho": "For who?"
   },
   "mock": {
     "title": "Unite for Tomorrow!",
     "description-short": "In unity, we find strength. Together, we shape the future. Join hands, dream big, and make the world a better place. Together, we can achieve greatness.",
-    "description-long": "In a world filled with diversity, it's our shared values that bind us together. We celebrate our differences and embrace our common goals. We stand united in the face of challenges, knowing that together we are unstoppable. Our collective strength transcends borders and languages. We extend a hand of friendship and cooperation to build a brighter future for all. Together, we can overcome any obstacle, for unity knows no boundaries."
+    "description-long": "In a world filled with diversity, it's our shared values that bind us together. We celebrate our differences and embrace our common goals. We stand united in the face of challenges, knowing that together we are unstoppable. Our collective strength transcends borders and languages. We extend a hand of friendship and cooperation to build a brighter future for all. Together, we can overcome any obstacle, for unity knows no boundaries.",
+    "description-short2":"In a world where cooperation fuels progress, our unity shines brightly. Together, we pave the way for a better world, where possibilities are endless. Join our global family and let's build a future of shared prosperity, love, and understanding. Together, we are unstoppable."
   }
 }
