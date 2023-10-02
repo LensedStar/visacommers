@@ -29,18 +29,18 @@ export default function SelectLocale() {
                <MenuItem value="en">
                    <span className="langSelector">
                        <img src={ukFlag} alt="ukFlag" className="flagImg"/>
-                       <p>Eng</p>
+                       <p>EN</p>
                    </span>
                    </MenuItem>
                <MenuItem value="ru">
                    <span className="langSelector">
                        <img src={rusFlag} alt="rusFlag" className="flagImg"/>
-                       <p>Русс</p>
+                       <p>RU</p>
                    </span></MenuItem>
                <MenuItem value="ua">
                    <span className="langSelector">
                        <img src={uaFlag} alt="uaFlag" className="flagImg"/>
-                      <p>Укр</p>
+                      <p>UA</p>
                    </span>
                </MenuItem>
            </Select>

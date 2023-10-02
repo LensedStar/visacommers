@@ -2,6 +2,7 @@
   "navigation":{
     "home": "Главная",
     "about": "Про нас",
-    "something": "Что-то"
+    "something": "Что-то",
+    "apply":"Узнать больше"
   }
 }

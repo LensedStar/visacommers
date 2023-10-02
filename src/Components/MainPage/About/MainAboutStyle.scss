@@ -1,0 +1,23 @@
+.about{
+  margin-top: 100px;
+  height: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  .aboutText{
+    border-radius: 5px;
+    background-color: rgb(195,227,226);
+    padding: 20px 20px;
+    margin: 0 0 40px 0;
+  }
+  .aboutText1{
+    justify-self: flex-end;
+
+  }
+  .aboutText2{
+    justify-self: flex-start;
+
+  }
+}
