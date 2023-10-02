@@ -6,12 +6,11 @@ $clr-4:rgb(130, 133, 142);
 $clr-5:rgb(52, 55, 66);
 
 .about{
-  margin-top: 100px;
-  height: auto;
+  margin-top: 40px;
+  height: fit-content;
   width: 100%;
-  display:grid;
-  grid-row-gap: 20px;
-  grid-template-rows: repeat(3,1fr);
+  display:flex;
+  flex-direction: column;
   overflow: hidden;
   justify-content: center;
   align-items: center;
@@ -22,7 +21,8 @@ $clr-5:rgb(52, 55, 66);
     padding: 20px 20px;
     width: 70%;
     color: $clr-1;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; ;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 50px;
     @media screen and (min-width: 900px){
       width: 60%;
       justify-self: center;
@@ -31,13 +31,13 @@ $clr-5:rgb(52, 55, 66);
   }
   .aboutText1{
     @media screen and (max-width: 900px){
-      justify-self: end;
+      align-self: end;
     }
 
   }
   .aboutText2{
     @media screen and (max-width: 900px){
-      justify-self: start;
+      align-self: start;
     }
   }
 }

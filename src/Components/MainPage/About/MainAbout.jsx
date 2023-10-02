@@ -2,11 +2,12 @@ import React from "react";
 
 import { motion } from "framer-motion";
 
+import {useTranslation} from "react-i18next";
 
 import "./MainAboutStyle.scss";
 
 export default function MainAbout() {
-
+const {t} = useTranslation();
     return(
         <div className="about">
                 <motion.div
@@ -26,27 +27,9 @@ export default function MainAbout() {
                     }}
                     viewport={{once:true}}
                 >
-                    <h2>Почему словения</h2>
+                    <h2>{t("mock.title")}</h2>
                     <p>
-                        Lorem ipsum dolor
-                        sit amet
-                        consectetur adipisicing
-                        elit.Lorem ipsum dolor
-                        sit amet
-                        consectetur adipisicing
-                        elit.Lorem ipsum dolor
-                        sit amet
-                        consectetur adipisicing
-                        elit.Lorem ipsum dolor
-                        sit amet
-                        consectetur adipisicing
-                        elit.Lorem ipsum dolor
-                        sit amet
-                        consectetur adipisicing
-                        elit.Lorem ipsum dolor
-                        sit amet
-                        consectetur adipisicing
-                        elit.
+                        {t("mock.description-short")}
                     </p>
                 </motion.div>
 
@@ -68,32 +51,9 @@ export default function MainAbout() {
                 }}
                 viewport={{once:true}}
             >
-                <h2>Почему мы </h2>
+                <h2>{t("mock.title")}</h2>
                 <p>
-                    Lorem ipsum dolor
-                    sit amet
-                    consectetur adipisicing
-                    elit.Lorem ipsum dolor
-                    sit amet
-                    consectetur adipisicing
-                    elit.Lorem ipsum dolor
-                    sit amet
-                    consectetur adipisicing
-                    elit.Lorem ipsum dolor
-                    sit amet
-                    consectetur adipisicing
-                    elit.Lorem ipsum dolor
-                    sit amet
-                    consectetur adipisicing
-                    elit.Lorem ipsum dolor
-                    sit amet
-                    consectetur adipisicing
-                    elit.
-                    consectetur adipisicing
-                    elit.Lorem ipsum dolor
-                    sit amet
-                    consectetur adipisicing
-                    elit.
+                    {t("mock.description-long")}
                 </p>
             </motion.div>
 
@@ -115,22 +75,9 @@ export default function MainAbout() {
                 }}
                 viewport={{once:true}}
             >
-                <h2>Кто может податься</h2>
+                <h2>{t("mock.title")}</h2>
                 <p>
-                    Lorem ipsum dolor
-                    sit amet
-                    consectetur adipisicing
-                    elit.Lorem ipsum dolor
-                    sit amet
-                    consectetur adipisicing
-                    elit.Lorem ipsum dolor
-                    sit amet
-                    consectetur adipisicing
-                    elit.Lorem ipsum dolor
-                    sit amet
-                    consectetur adipisicing
-                    elit.Lorem ipsum dolor
-                    sit amet elit.
+                    {t("mock.description-short")}
                 </p>
             </motion.div>
 
