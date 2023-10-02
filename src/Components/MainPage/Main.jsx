@@ -1,6 +1,8 @@
 import React from "react";
 import "./MainStyle.scss";
 import MainAbout from "./About/MainAbout";
+
+import Button from "../Button/Button";
 export default function Main() {
     return(
         <>
@@ -9,7 +11,10 @@ export default function Main() {
                 <h1>Визы в словению</h1>
                 <h2>Тут будеь чтото написано on all lang. Крутой слоган что всем захочется с нами поговрить ОГО</h2>
             </div>
-            <button type="button" className="bannerButton">СВЯЗАТЬСЯ С НАМИ</button>
+            <Button content={"ПОДАТЬ ЗАЯВКУ"} style={
+                {width: "300px",
+                height: "50px"}
+            } />
         </main>
             <MainAbout />
         </>

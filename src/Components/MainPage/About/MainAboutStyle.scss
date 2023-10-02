@@ -1,23 +1,43 @@
+
+$clr-1:rgb(248, 244, 242);
+$clr-2:rgb(121, 132, 139);
+$clr-3:rgb(142, 169, 174);
+$clr-4:rgb(130, 133, 142);
+$clr-5:rgb(52, 55, 66);
+
 .about{
   margin-top: 100px;
   height: auto;
   width: 100%;
   display:grid;
+  grid-row-gap: 20px;
   grid-template-rows: repeat(3,1fr);
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
   .aboutText{
     border-radius: 10px;
-    background-color: rgb(195,227,226);
+    background-color: $clr-4;
     padding: 20px 20px;
-    margin: 0 0 40px 0;
-    width: 90%;
+    width: 70%;
+    color: $clr-1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; ;
+    @media screen and (min-width: 900px){
+      width: 60%;
+      justify-self: center;
+    }
 
   }
   .aboutText1{
-    justify-self: end;
+    @media screen and (max-width: 900px){
+      justify-self: end;
+    }
 
   }
   .aboutText2{
-    justify-self: start;
-
+    @media screen and (max-width: 900px){
+      justify-self: start;
+    }
   }
 }

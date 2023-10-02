@@ -24,11 +24,26 @@ export default function MainAbout() {
                     transition={{
                         duration:1,
                     }}
-                    viewport={{once:false}}
+                    viewport={{once:true}}
                 >
-                    <h2>О нас</h2>
+                    <h2>Почему словения</h2>
                     <p>
                         Lorem ipsum dolor
+                        sit amet
+                        consectetur adipisicing
+                        elit.Lorem ipsum dolor
+                        sit amet
+                        consectetur adipisicing
+                        elit.Lorem ipsum dolor
+                        sit amet
+                        consectetur adipisicing
+                        elit.Lorem ipsum dolor
+                        sit amet
+                        consectetur adipisicing
+                        elit.Lorem ipsum dolor
+                        sit amet
+                        consectetur adipisicing
+                        elit.Lorem ipsum dolor
                         sit amet
                         consectetur adipisicing
                         elit.
@@ -49,13 +64,33 @@ export default function MainAbout() {
                 }}
                 transition={{
                     duration:1,
-                    delay:.5,
+                    delay:.2,
                 }}
-                viewport={{once:false}}
+                viewport={{once:true}}
             >
-                <h2>О нас</h2>
+                <h2>Почему мы </h2>
                 <p>
                     Lorem ipsum dolor
+                    sit amet
+                    consectetur adipisicing
+                    elit.Lorem ipsum dolor
+                    sit amet
+                    consectetur adipisicing
+                    elit.Lorem ipsum dolor
+                    sit amet
+                    consectetur adipisicing
+                    elit.Lorem ipsum dolor
+                    sit amet
+                    consectetur adipisicing
+                    elit.Lorem ipsum dolor
+                    sit amet
+                    consectetur adipisicing
+                    elit.Lorem ipsum dolor
+                    sit amet
+                    consectetur adipisicing
+                    elit.
+                    consectetur adipisicing
+                    elit.Lorem ipsum dolor
                     sit amet
                     consectetur adipisicing
                     elit.
@@ -76,16 +111,26 @@ export default function MainAbout() {
                 }}
                 transition={{
                     duration:1,
-                    delay:1,
+                    delay:.5,
                 }}
-                viewport={{once:false}}
+                viewport={{once:true}}
             >
-                <h2>О нас</h2>
+                <h2>Кто может податься</h2>
                 <p>
                     Lorem ipsum dolor
                     sit amet
                     consectetur adipisicing
-                    elit.
+                    elit.Lorem ipsum dolor
+                    sit amet
+                    consectetur adipisicing
+                    elit.Lorem ipsum dolor
+                    sit amet
+                    consectetur adipisicing
+                    elit.Lorem ipsum dolor
+                    sit amet
+                    consectetur adipisicing
+                    elit.Lorem ipsum dolor
+                    sit amet elit.
                 </p>
             </motion.div>
 

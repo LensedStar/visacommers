@@ -14,6 +14,8 @@ import {useTranslation} from "react-i18next";
 
 import SelectLocale from "./SelectLocale";
 
+import Button from "../Button/Button";
+
 export default function Header() {
     const [open, setOpen] = useState(false);
     const {t,} = useTranslation();
@@ -25,7 +27,7 @@ export default function Header() {
         <nav className="nav">
             <SelectLocale />
            <button className="dropDownButton" onClick={()=>handleDropDown()}>
-            <FontAwesomeIcon className="DropDown" icon={faBars} size="xl"/>
+            <FontAwesomeIcon className="DropDown" icon={faBars} size="xl" style={{color:"black"}}/>
            </button>
             <Drawer anchor="right" open={open} onClose={()=>handleDropDown()}
                     PaperProps={{
@@ -43,7 +45,7 @@ export default function Header() {
                         <Link to="/something" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.something")}</p></Link>
                     </span>
                     <button className="dropDownButton" onClick={()=>handleDropDown()}>
-                        <FontAwesomeIcon icon={faX} size="xl"/>
+                        <FontAwesomeIcon icon={faX} size="xl" style={{color:"black"}}/>
                     </button>
                     </article>
                     <article className="contacts">
@@ -55,9 +57,7 @@ export default function Header() {
                             <FontAwesomeIcon icon={faEnvelope} size="lg"/>
                             <a href = "mailto: abc@example.com">adc@example.com</a>
                         </span>
-                        <button className="applyNow">
-                            {t("navigation.apply")}
-                        </button>
+                        <Button content={t("navigation.apply")} style={{alignSelf : "center"}} />
                     </article>
                 </div>
             </Drawer>
