@@ -16,7 +16,6 @@ $clr-5:rgb(52, 55, 66);
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   &:hover{
     cursor: pointer;
-    background-color: $clr-3 !important;
   }
   &:active{
     background-color: $clr-1 !important;
