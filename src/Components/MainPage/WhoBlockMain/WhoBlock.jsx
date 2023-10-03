@@ -53,7 +53,7 @@ const handleMinus = () => {
                    :
                    <motion.aside className="variant variant2"
                                  key="2"
-                                 initial={{x:200,}}
+                                 initial={{x:100,}}
                                  animate={{opacity:1,x:0}}
                                  exit={{opacity:0,display:"none"}}
                                  transition={{
