@@ -1,4 +1,5 @@
 
+
 $clr-1:rgb(248, 244, 242);
 $clr-2:rgb(121, 132, 139);
 $clr-3:rgb(142, 169, 174);
@@ -11,11 +12,16 @@ $clr-5:rgb(52, 55, 66);
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 20px 50px 20px;
+  margin-top: 100px;
   margin-bottom: 100px;
+  background-color:$clr-3;
+
   .whoTitle{
     margin: 50px 0 50px 0;
     align-self: center;
+    font-size: 2rem;
+    color:$clr-1;
   }
   .variants{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -23,11 +29,32 @@ $clr-5:rgb(52, 55, 66);
     padding: 20px;
     display: flex;
     flex-direction: column;
+    width: 50%;
+    background-color: $clr-1;
+    overflow: hidden;
+    height: 400px;
+    @media screen and (max-width: 1000px){
+      width: 70%;
+    }
+    @media screen and (max-width: 500px){
+      width: 100%;
+    }
     .variantsBtns{
-      align-self: end;
-      margin-right: 20px;
+      align-self: center;
+      margin: 5px;
+      padding: 0 30px;
+      overflow: inherit;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
       *{
-        margin: 0 10px;
+        &:hover{
+          cursor: pointer;
+        }
+        &:active {
+          transform: scale(1.1);
+        }
       }
     }
     .variant{
@@ -37,6 +64,7 @@ $clr-5:rgb(52, 55, 66);
       align-items: center;
       margin-bottom: 20px;
       min-height: 300px;
+      overflow: hidden;
       .icon{
         align-self: flex-start;
         margin-bottom: 15px;
