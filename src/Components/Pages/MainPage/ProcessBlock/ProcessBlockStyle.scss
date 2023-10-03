@@ -1,0 +1,52 @@
+
+$clr-1:rgb(248, 244, 242);
+$clr-2:rgb(121, 132, 139);
+$clr-3:rgb(142, 169, 174);
+$clr-4:rgb(130, 133, 142);
+$clr-5:rgb(52, 55, 66);
+$shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+.processBlock{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 10%;
+  margin-bottom: 100px;
+  height: fit-content;
+  h2{
+    margin-bottom: 50px;
+  }
+  .process{
+    border-radius: 10px;
+    padding: 25px 20px;
+    color: $clr-1;
+    position: relative;
+    box-shadow: $shadow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    .processText{
+      margin: 20px 0 0 0;
+      h3{
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .process1{
+    background-color: $clr-2;
+    top:20px;
+    z-index: 3;
+  }
+  .process2{
+    background-color:$clr-4 ;
+    top:10px;
+    z-index: 2;
+  }
+  .process3{
+    background-color: $clr-5;
+  }
+
+}

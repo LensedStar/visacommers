@@ -17,6 +17,8 @@ import {motion} from "framer-motion";
 import {Link} from "react-scroll"
 
 import WhoBlock from "./WhoBlockMain/WhoBlock";
+
+import ProcessBlock from "./ProcessBlock/ProcessBlock";
 export default function Main() {
     const {t} = useTranslation();
     return(
@@ -49,6 +51,7 @@ export default function Main() {
         </main>
             <MainAbout />
             <WhoBlock />
+            <ProcessBlock />
         </>
     )
 }
