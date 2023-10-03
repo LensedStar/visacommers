@@ -83,6 +83,13 @@ $clr-5:rgb(52, 55, 66);
         font-size: 1rem;
         min-height: 130px;
       }
+      .Wholink{
+        text-decoration: none;
+        color: $clr-1;
+        &:visited{
+          color: $clr-1;
+        }
+      }
     }
 
   }

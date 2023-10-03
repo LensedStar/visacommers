@@ -8,7 +8,8 @@
 },
   "main": {
     "title": "Виза Cловении",
-    "forWho": "For who?"
+    "forWho": "For who?",
+    "learnMore": "Дізнатись більше"
   },
   "mock": {
     "title": "Об'єднуйтеся для завтра!",

@@ -2,6 +2,7 @@ import React ,{useState} from "react";
 
 import "./WhoBlockStyle.scss";
 
+
 import { useTranslation } from "react-i18next";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +10,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {motion , AnimatePresence} from "framer-motion";
 
 import { faBriefcase,faGraduationCap,faChevronLeft,faChevronRight } from "@fortawesome/free-solid-svg-icons";
+
+import {Link} from "react-router-dom";
+
+import Button from "../../Button/Button";
 
 export default function WhoBlock() {
 const {t} = useTranslation();
@@ -49,6 +54,12 @@ const handleMinus = () => {
                        <h4>{t("mock.title")}</h4>
                        <p>{t("mock.description-short")}</p>
                    </article>
+                  <Button content={
+                      <Link className="Wholink" to="/about">{t("main.learnMore")}</Link>
+                  } style={{
+                      alignSelf : "center",
+                      backgroundColor:"#8ea9ae",
+                  }} classN="linkWhoButton"/>
                </motion.aside>
                    :
                    <motion.aside className="variant variant2"
@@ -67,6 +78,12 @@ const handleMinus = () => {
                            <h4>{t("mock.title")}</h4>
                            <p>{t("mock.description-short2")}</p>
                        </article>
+                       <Button content={
+                           <Link className="Wholink" to="/about">{t("main.learnMore")}</Link>
+                       } style={{
+                           alignSelf : "center",
+                           backgroundColor:"#8ea9ae",
+                       }} classN="linkWhoButton"/>
                    </motion.aside>
                }
                 </AnimatePresence>
