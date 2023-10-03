@@ -28,6 +28,7 @@ $clr-5:rgb(52, 55, 66);
   position: fixed;
   height: 50px;
   background-color: $clr-1;
+  z-index: 1000;
 }
 .dropDownButton{
   margin: 0 20px 0 0;
