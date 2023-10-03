@@ -4,7 +4,7 @@ import "./MainStyle.scss";
 
 import MainAbout from "./About/MainAbout";
 
-import Button from "../Button/Button";
+import Button from "../../Button/Button";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

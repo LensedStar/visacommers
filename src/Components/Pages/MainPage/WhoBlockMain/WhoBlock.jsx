@@ -13,7 +13,7 @@ import { faBriefcase,faGraduationCap,faChevronLeft,faChevronRight } from "@forta
 
 import {Link} from "react-router-dom";
 
-import Button from "../../Button/Button";
+import Button from "../../../Button/Button";
 
 export default function WhoBlock() {
 const {t} = useTranslation();
@@ -34,16 +34,17 @@ const handleMinus = () => {
                 initial={{opacity:0,x:-100}}
                 whileInView={{opacity:1,x:0}}
                transition={{duration:0.5,}}
+               viewport={{once:true}}
            >
-               <AnimatePresence>
+               <AnimatePresence mode="wait">
                {slide === 0 ? <motion.aside
                    className="variant variant1"
                    key="1"
-                   initial={{x:-100}}
+                   initial={{opacity:0,x:-100}}
                    animate={{opacity:1,x:0}}
-                   exit={{opacity:0,x:100,display:"none"}}
+                   exit={{opacity:0,x:100}}
                    transition={{
-                       duration: 0.5,
+                       duration: 0.3,
                    }}
 
                >
@@ -64,11 +65,11 @@ const handleMinus = () => {
                    :
                    <motion.aside className="variant variant2"
                                  key="2"
-                                 initial={{x:100,}}
+                                 initial={{opacity:0,x:-100}}
                                  animate={{opacity:1,x:0}}
-                                 exit={{opacity:0,display:"none"}}
+                                 exit={{opacity:0,x:100}}
                                  transition={{
-                                     duration: 0.5,
+                                     duration: 0.3,
                                  }}
                    >
                    <span className="icon">
