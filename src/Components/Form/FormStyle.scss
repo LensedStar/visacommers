@@ -13,6 +13,9 @@ $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: $clr-3;
   width: 100%;
   padding: 50px 20px;
+  @media screen and (max-width: 600px){
+    padding: 50px 0;
+  }
 }
 
 .applyForm {
@@ -23,6 +26,9 @@ $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   //background-color: $clr-1;
   width: 80%;
   padding: 30px 20px 20px 20px;
+  @media screen and (max-width: 600px){
+    padding: 30px 5px 20px 5px;
+  }
   ::placeholder{
     color: $clr-5;
   }

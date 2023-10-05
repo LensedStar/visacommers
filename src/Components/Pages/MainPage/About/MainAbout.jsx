@@ -46,7 +46,7 @@ const {t} = useTranslation();
                     x:0,
                 }}
                 transition={{
-                    duration:1,g
+                    duration:1,
                 }}
                 viewport={{once:true}}
             >
