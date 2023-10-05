@@ -1,0 +1,45 @@
+
+$clr-1:rgb(248, 244, 242);
+$clr-2:rgb(121, 132, 139);
+$clr-3:rgb(142, 169, 174);
+$clr-4:rgb(130, 133, 142);
+$clr-5:rgb(52, 55, 66);
+
+.applyForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  .typeSelect{
+    margin-bottom: 20px;
+  }
+  .PhoneInput{
+    width: 80%;
+  }
+  input{
+    height: 30px;
+    width: 80%;
+    border-radius: 5px;
+    border: .5px solid $clr-4;
+    padding: 0 0 0 10px;
+    margin-bottom: 8px;
+  }
+  select{
+    height: 30px;
+    width: 80%;
+    border-radius: 5px;
+    border: .5px solid $clr-4;
+    padding: 0 0 0 10px;
+    margin-bottom: 8px;
+  }
+  select:required {
+    color: #666;
+  }
+  option[value=""][disabled] {
+    display: none;
+  }
+  option {
+    color: #000;
+  }
+  }

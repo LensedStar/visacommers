@@ -16,27 +16,31 @@ $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   justify-content: center;
   align-items: center;
   padding: 0 10px;
+  @media screen and (min-width: 900px){
+    padding: 0 20%;
+  }
   .aboutText{
     border-radius: 10px;
     background-color: $clr-4;
     padding: 20px 20px;
-    width: 70%;
+    width: 80%;
     color: $clr-1;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-top: 50px;
     @media screen and (min-width: 900px){
-      width: 60%;
-      justify-self: center;
+      width: 70%;
     }
 
   }
   .aboutText1{
+    align-self: end;
     @media screen and (max-width: 900px){
       align-self: end;
     }
 
   }
   .aboutText2{
+    align-self: start;
     @media screen and (max-width: 900px){
       align-self: start;
     }

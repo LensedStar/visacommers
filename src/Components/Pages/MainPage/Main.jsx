@@ -19,6 +19,8 @@ import {Link} from "react-scroll"
 import WhoBlock from "./WhoBlockMain/WhoBlock";
 
 import ProcessBlock from "./ProcessBlock/ProcessBlock";
+
+import ApplyForm from "../../Form/ApplyForm";
 export default function Main() {
     const {t} = useTranslation();
     return(
@@ -52,6 +54,7 @@ export default function Main() {
             <MainAbout />
             <WhoBlock />
             <ProcessBlock />
+            <ApplyForm />
         </>
     )
 }

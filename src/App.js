@@ -7,6 +7,7 @@ import Header from "./Components/Header/Header";
 import Main from "./Components/Pages/MainPage/Main";
 import Something from "./Components/Something";
 import About from "./Components/About";
+import Footer from "./Components/Footer/Footer";
 
 export default function App() {
     return(
@@ -18,6 +19,7 @@ export default function App() {
                 <Route path="/something" element={<Something/>} />
                 <Route path="/about" element={<About />} />
             </Routes>
+            <Footer />
         </div>
     )
 }

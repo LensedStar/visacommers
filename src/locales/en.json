@@ -10,6 +10,21 @@
     "forWho": "For who?",
     "learnMore": "Learn more"
   },
+  "form": {
+    "title": "Apply now",
+    "name": "Name",
+    "nationality": "Nationality",
+    "surname": "Surname",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "visaType":"Visa type",
+    "vFast": "Fast visa",
+    "vStudy": "Study visa",
+    "howContact": "How do you want us to contact you?",
+    "error": "This field is required",
+    "submit": "Submit"
+  },
   "process": {
     "title": "How it works"
   },
