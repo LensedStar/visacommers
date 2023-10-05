@@ -13,7 +13,7 @@
   "form": {
     "title": "Apply now",
     "name": "Name",
-    "nationality": "Nationality",
+    "nationality": "Citizenship",
     "surname": "Surname",
     "email": "Email",
     "phone": "Phone",
