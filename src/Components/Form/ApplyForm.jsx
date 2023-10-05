@@ -46,7 +46,8 @@ const {t,i18n} = useTranslation();
             text: `Имя: ${data.name}
             \nФамилия: ${data.surname} 
             \nНациональность: ${data.country} 
-            \nТелефон: ${data.phone} \nEmail: ${data.email} 
+            \nТелефон: ${data.phone} 
+            \nEmail: ${data.email} 
             \nТип визы: ${data.type }
             \nКак с вами связаться: ${data.howContact}`
         }).then(()=>console.log("Send"))
