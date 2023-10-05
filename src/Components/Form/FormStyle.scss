@@ -4,34 +4,83 @@ $clr-2:rgb(121, 132, 139);
 $clr-3:rgb(142, 169, 174);
 $clr-4:rgb(130, 133, 142);
 $clr-5:rgb(52, 55, 66);
+$shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+.formContainer{
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  background-color: $clr-3;
+  width: 100%;
+  padding: 50px 20px;
+}
 
 .applyForm {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
+  //background-color: $clr-1;
+  width: 80%;
+  padding: 30px 20px 20px 20px;
+  border-radius: 10px;
+  ::placeholder{
+    color: $clr-5;
+  }
+  .subBtn{
+    background-color: $clr-1!important;
+    color: $clr-5!important;
+    margin-top: 20px!important;
+    &:active{
+      color: $clr-1!important;
+      background-color: $clr-5!important;
+    }
+  }
+  //box-shadow:$shadow;
   .typeSelect{
     margin-bottom: 20px;
   }
   .PhoneInput{
     width: 80%;
+    @media screen and (max-width: 600px){
+      width: 100%;
+    }
+  }
+  .PhoneInputCountry{
+    background-color: $clr-1;
+    height: 40px;
+    margin: 0;
+    padding: 0 10px;
   }
   input{
-    height: 30px;
+    height: 40px;
     width: 80%;
-    border-radius: 5px;
-    border: .5px solid $clr-4;
-    padding: 0 0 0 10px;
-    margin-bottom: 8px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: $clr-1;
+    &:focus{
+      outline: none;
+    }
+    @media screen and (max-width: 600px){
+      width: 100%;
+    }
+
   }
   select{
-    height: 30px;
+    height: 40px;
     width: 80%;
-    border-radius: 5px;
-    border: .5px solid $clr-4;
-    padding: 0 0 0 10px;
-    margin-bottom: 8px;
+    border: none;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    background-color: $clr-1;
+    -webkit-appearance: none;
+    &:focus{
+      outline: none;
+    }
+    @media screen and (max-width: 600px){
+      width: 100%;
+    }
   }
   select:required {
     color: #666;
@@ -42,4 +91,16 @@ $clr-5:rgb(52, 55, 66);
   option {
     color: #000;
   }
+  .error{
+    color: rgba(133, 13, 13, 1);
+    font-size: .9rem;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+    opacity: .6;
+    margin-bottom: 5px;
+    align-self: start;
+    padding-left: 60px;
+  }
+
   }

@@ -63,7 +63,7 @@ const {t,i18n} = useTranslation();
         }
     }
     return(
-        <>
+        <div className="formContainer">
         <form className="applyForm" onSubmit={handleSubmit(fetchForm)}>
             <input type="text" placeholder={t("form.name")} {...register("name",{required:true,maxLength:20})}/>
             { errors.name && <span className="error">{t("form.error")}</span> }
@@ -113,8 +113,8 @@ const {t,i18n} = useTranslation();
                 <option value="Email">Email</option>
             </select>
             { errors.howContact && <span className="error">{t("form.error")}</span> }
-            <Button type="submit" content={t("form.submit")} />
+            <Button type="submit" content={t("form.submit")} classN="subBtn"/>
         </form>
-</>
+        </div>
     )
 }
