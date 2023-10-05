@@ -78,11 +78,15 @@ $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-bottom: 10px;
     background-color: $clr-1;
     -webkit-appearance: none;
+    -webkit-text-fill-color: $clr-5;
     &:focus{
       outline: none;
     }
     @media screen and (max-width: 600px){
       width: 100%;
+    }
+    &option[disabled]{
+        color: $clr-5;
     }
   }
   select:required {
