@@ -99,6 +99,17 @@ $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   select:required {
     color: #666;
   }
+  #text{
+    color: rgba(133, 13, 13, 1);
+    font-size: .9rem;
+    text-align: start;
+    opacity: .6;
+    margin-bottom: 5px;
+    align-self: start;
+    padding-left: 15px;
+    position: relative;
+    bottom: 6px;
+  }
   option[value=""][disabled] {
     display: none;
   }
@@ -108,13 +119,13 @@ $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   .error{
     color: rgba(133, 13, 13, 1);
     font-size: .9rem;
-    margin: 0;
-    padding: 0;
     text-align: start;
     opacity: .6;
     margin-bottom: 5px;
     align-self: start;
-    padding-left: 60px;
+    padding-left: 15px;
+    position: relative;
+    bottom: 6px;
   }
 
   }

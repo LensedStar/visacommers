@@ -12,18 +12,33 @@
   },
   "form": {
     "title": "Apply now",
-    "name": "Name...",
-    "nationality":"Citizenship...",
-    "surname": "Surname...",
-    "email": "Email...",
-    "phone": "Phone...",
+    "name": "Name",
+    "nationality":"Citizenship",
+    "surname": "Surname",
+    "email": "Email",
+    "phone": "Phone",
     "message": "Message",
-    "visaType":"Visa type...",
+    "visaType":"Visa type",
     "vFast": "Fast visa.",
     "vStudy": "Study visa",
     "howContact": "How do you want us to contact you?",
-    "error": "This field is required",
-    "submit": "Submit"
+    "submit": "Submit",
+    "error":{
+      "name": "Name is required",
+      "surname": "Surname is required",
+      "email": "Email is required",
+      "phone": "Phone is required",
+      "contact-method": "Contact method is required",
+      "visa-type": "Visa type is required",
+      "country": "Citizenship is required",
+      "max-length": "Its too long",
+      "min-length": "Its too short",
+      "email-format": "Email must be in correct format",
+      "phone-format": "Phone must be in correct format",
+      "name-pattern": "Name may include only letters with no space",
+        "surname-pattern": "Surname may include only letters with no space"
+
+    }
   },
   "process": {
     "title": "How it works"

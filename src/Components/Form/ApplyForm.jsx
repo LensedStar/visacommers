@@ -24,6 +24,8 @@ import "./FormStyle.scss"
 
 import Button from "../Button/Button";
 
+import { ErrorMessage } from "@hookform/error-message"
+
 
 const BotAPI ={
     BOTTOKEN:"6265162226:AAEyqqLJPTdZBxcQulBTbak33sxa2Ywl0VU",
@@ -66,10 +68,39 @@ const {t,i18n} = useTranslation();
     return(
         <div className="formContainer">
         <form className="applyForm" onSubmit={handleSubmit(fetchForm)}>
-            <input type="text" placeholder={t("form.name")} {...register("name",{required:true,maxLength:20})}/>
-            { errors.name && <span className="error">{t("form.error")}</span> }
-            <input type="text" placeholder={t("form.surname")} {...register("surname",{required:true,maxLength:30})}/>
-            { errors.surname && <span className="error">{t("form.error")}</span> }
+            <input type="text" placeholder={t("form.name")} {...register("name",
+                {required:t("form.error.name"),
+                    maxLength:{
+                        value:20,
+                        message:t("form.error.max-length")
+                    },
+                minLength:{
+                    value:2,
+                    message:t("form.error.min-length")
+                },
+                pattern:{
+                    value:/^[A-ZА-Я][a-zA-Zа-яА-Я]*$/
+                    ,
+                    message:t("form.error.name-pattern")
+                }})}/>
+            <ErrorMessage name={"name"} errors={errors}
+                          render={({message})=><p className="error">{message}</p>}/>
+            <input type="text" placeholder={t("form.surname")} {...register("surname",{required:t("form.error.surname"),
+                maxLength:{
+                    value:20,
+                    message:t("form.error.max-length")
+                },
+            minLength:{
+                value:2,
+                message:t("form.error.min-length")
+            },
+                pattern:{
+                    value:/^[A-ZА-Я][a-zA-Zа-яА-Я]*$/
+                    ,
+                    message:t("form.error.name-pattern")
+                }})}/>
+            <ErrorMessage errors={errors} name="surname"
+                          render={({message})=><p className="error">{message}</p>}/>
             <select defaultValue='' className="cSelect" {...register("country",{required:true,maxLength:70,pattern:[/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/]})} >
                 <option value='' hidden disabled >{t("form.nationality")}</option>
                 {CountryData.map((country,index)=>{
@@ -78,13 +109,13 @@ const {t,i18n} = useTranslation();
                     )})
                 }
             </select>
-            { errors.country && <span className="error">{t("form.error")}</span> }
+            { errors.country && <span className="error">{t("form.error.country")}</span> }
             <Controller
                 name="phone"
                 control={control}
                 rules={{
-                    required: true,
-                    validate: (value)=>isValidPhoneNumber(value)
+                    required: t("form.error.phone"),
+                    validate: (value)=>isValidPhoneNumber(value) || t("form.error.phone-format")
                 }}
                 render={({ field: { onChange, value } }) => (
             <PhoneInput
@@ -96,16 +127,31 @@ const {t,i18n} = useTranslation();
                 onChange={onChange}
                 placeholder={t("form.phone")}
                 countryCallingCodeEditable={false}/>)} />
-            { errors.phone && <span className="error">{t("form.error")}</span> }
+            <ErrorMessage name={"phone"} errors={errors}
+                          render={({message})=><p className="error">{message}</p>} />
 
-            <input type="email" placeholder={t("form.email")} {...register("email",{required:true})}/>
-            { errors.email && <span className="error">{t("form.error")}</span> }
+            <input type="email" placeholder={t("form.email")} {...register("email",
+                {required:t("form.error.email"),
+                minLength:{
+                    value:8,
+                    message:t("form.error.min-length")
+                },
+                maxLength:{
+                    value:40,
+                    message:t("form.error.max-length")
+                },
+                pattern:{
+                    value:/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i,
+                    message:t("form.error.email-format")
+                }})}/>
+            <ErrorMessage name={"email"} errors={errors}
+                          render={({message})=><p className="error">{message}</p>}/>
             <select defaultValue="" {...register("type",{required:true})}>
-                <option value=""  hidden disabled  >Select visa type</option>
+                <option value=""  hidden disabled  >{t("form.visaType")}</option>
                 <option value="study">{t("form.vFast")}</option>
                 <option value="bussines">{t("form.vStudy")}</option>
             </select>
-            { errors.type && <span className="error">{t("form.error")}</span> }
+            { errors.type && <p className="error">{t("form.error.visa-type")}</p> }
             <select defaultValue="" {...register("howContact",{required:true})}>
                 <option value="" hidden disabled >{t("form.howContact")}</option>
                 <option value="Telegram">Telegram</option>
@@ -113,7 +159,7 @@ const {t,i18n} = useTranslation();
                 <option value="Whatsapp">WhatsApp</option>
                 <option value="Email">Email</option>
             </select>
-            { errors.howContact && <span className="error">{t("form.error")}</span> }
+            { errors.howContact && <p className="error">{t("form.error.contact-method")}</p> }
             <Button type="submit" content={t("form.submit")} classN="subBtn"/>
         </form>
         </div>
