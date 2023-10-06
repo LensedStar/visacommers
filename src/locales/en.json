@@ -23,6 +23,9 @@
     "vStudy": "Study visa",
     "howContact": "How do you want us to contact you?",
     "submit": "Submit",
+    "success": "Form submitted successfully.",
+    "thankYou": "Thank you for your interest in our services.",
+    "contactSoon": "We will contact you soon.",
     "error":{
       "name": "Name is required",
       "surname": "Surname is required",
