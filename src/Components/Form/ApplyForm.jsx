@@ -216,7 +216,7 @@ export default function ApplyForm() {
                                    target="_blank"
                                    rel="noreferrer"
                                    className="errorLink">
-                                    Как найти?
+                                    {t("form.how-find")}
                                 </a>
                             </>
                         } />
