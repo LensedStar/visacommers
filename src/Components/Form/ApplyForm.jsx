@@ -28,7 +28,7 @@ import apiCall from "./apiCall";
 
 import { motion,AnimatePresence } from "framer-motion";
 
-import iconDone from "./DoneImg/iconDone.gif";
+import iconDone from "./DoneImg/iconDone.svg";
 
 export default function ApplyForm() {
     const {t, i18n} = useTranslation();
@@ -69,7 +69,7 @@ export default function ApplyForm() {
                     <motion.div
                         className="sucsessContainer"
                         key="sucsess"
-                        initial={{opacity:0 , y:500}}
+                        initial={{opacity:0, y:500}}
                         animate={{opacity:1 , y:0}}
                         transition={{
                             duration: 0.5,
