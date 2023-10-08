@@ -28,7 +28,7 @@ import apiCall from "./apiCall";
 
 import { motion,AnimatePresence } from "framer-motion";
 
-import iconDone from "./DoneImg/iconeDoneStatic.png";
+import iconDone from "./DoneImg/iconDone.gif";
 
 export default function ApplyForm() {
     const {t, i18n} = useTranslation();
@@ -36,7 +36,8 @@ export default function ApplyForm() {
         register,
         handleSubmit,
         formState: {errors},
-        control
+        control,
+        watch
     } = useForm();
 
     const [isSend, setSend] = useState(false)
@@ -58,6 +59,8 @@ export default function ApplyForm() {
             return ua
         }
     }
+
+    const contact = watch("howContact","")
     return (
         (<AnimatePresence mode="wait">
             <div className="formContainer">
@@ -190,6 +193,37 @@ export default function ApplyForm() {
                             <option value="Email">Email</option>
                         </select>
                         {errors.howContact && <p className="error">{t("form.error.contact-method")}</p>}
+                        {contact === "Telegram" && <input type="text" name="tgTag" placeholder={t("form.tgTag")} {...register("tgTag",{
+                            required: t("form.error.telegram"),
+                            minLength: {
+                                value: 3,
+                                message: t("form.error.min-length")
+                            },
+                            maxLength: {
+                                value: 40,
+                                message: t("form.error.max-length")
+                            },
+                            validate:(value) => value[0] === "@" || t("form.error.telegram-format")
+                        })}/>}
+                        <ErrorMessage name="tgTag" errors={errors} render={({message})=>
+                            <>
+                                <p className="error">{message}</p>
+                                <a href={i18n.language === "en" ?
+                                    "https://clientdiary.com/knowledgebase/find-or-create-your-telegram-username-ios/"
+                                    :
+                                    "https://ustanovkaos.ru/obshchenie/kak-uznat-svoj-nik-v-telegramme.html#i-2"}
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   className="errorLink">
+                                    Как найти?
+                                </a>
+                            </>
+                        } />
+                        <span className="agreementContainer">
+                            <input className ="cBox" type="checkbox" name="agreement" value="agree" {...register("agreement",{required:true})}/>
+                            <label htmlFor="agrement">{t("form.agreement")}</label>
+                        </span>
+                        {errors.agreement && <p className="error">{t("form.error.agreement")}</p>}
                         <Button type="submit" content={t("form.submit")} classN="subBtn"/>
                     </motion.form>
                     }

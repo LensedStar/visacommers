@@ -19,6 +19,21 @@ $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 50px 0;
   }
 }
+.agreementContainer{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items:flex-start;
+.cBox{
+  width: 15px!important;
+  height: 15px!important;
+  margin-right: 20px!important;
+}
+  label{
+    font-size:.6rem
+  }
+}
 .sucsessContainer{
   display: flex;
     flex-direction: column;
@@ -30,6 +45,8 @@ $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       padding: 0 30px;
     }
   img{
+    width: 80px;
+    height: 80px;
     margin-bottom:100px;
   }
 

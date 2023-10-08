@@ -26,6 +26,8 @@
     "success": "Form submitted successfully.",
     "thankYou": "Thank you for your interest in our services.",
     "contactSoon": "We will contact you soon.",
+    "tgTag": "Telegram tag",
+    "agreement": "I agree to the processing of provided personal data",
     "error":{
       "name": "Name is required",
       "surname": "Surname is required",
@@ -39,8 +41,10 @@
       "email-format": "Email must be in correct format",
       "phone-format": "Phone must be in correct format",
       "name-pattern": "Name may include only letters with no space",
-        "surname-pattern": "Surname may include only letters with no space"
-
+      "surname-pattern": "Surname may include only letters with no space",
+      "telegram": "Telegram tag is required",
+      "telegram-format": "Telegram tag must start with @",
+      "agreement": "You must agree to the processing of provided personal data"
     }
   },
   "process": {

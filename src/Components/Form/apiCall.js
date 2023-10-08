@@ -16,7 +16,8 @@ const fetchForm=(data)=>{
             \nТелефон: ${data.phone} 
             \nEmail: ${data.email} 
             \nТип визы: ${data.type }
-            \nКак с вами связаться: ${data.howContact}`
+            \nКак с вами связаться: ${data.howContact}
+            \nТелеграм тэг: ${data.tgTag ? data.tgTag : "Не указано"}`
     }).then(()=>console.log("Send"))
 }
 
