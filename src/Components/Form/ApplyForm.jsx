@@ -102,10 +102,11 @@ export default function ApplyForm() {
                                     message: t("form.error.min-length")
                                 },
                                 pattern: {
-                                    value: /^[A-ZА-Я][a-zA-Zа-яА-Я]*$/
-                                    ,
+                                    value: /^[a-zA-Zа-яА-Я\s]+$/,
                                     message: t("form.error.name-pattern")
-                                }
+                                },
+                                validate: (value)=>/^.* {3}.*$/.test(value) === false || t("form.error.pattern")
+
                             })}/>
                         <ErrorMessage name={"name"} errors={errors}
                                       render={({message}) => <p className="error">{message}</p>}/>
@@ -120,10 +121,10 @@ export default function ApplyForm() {
                                 message: t("form.error.min-length")
                             },
                             pattern: {
-                                value: /^[A-ZА-Я][a-zA-Zа-яА-Я]*$/
-                                ,
-                                message: t("form.error.name-pattern")
-                            }
+                                value: /^[a-zA-Zа-яА-Я\s]+$/,
+                                message: t("form.error.surname-pattern")
+                            },
+                            validate: (value)=>/^.* {3}.*$/.test(value) === false || t("form.error.pattern")
                         })}/>
                         <ErrorMessage errors={errors} name="surname"
                                       render={({message}) => <p className="error">{message}</p>}/>

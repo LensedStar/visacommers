@@ -40,8 +40,8 @@
       "min-length": "Its too short",
       "email-format": "Email must be in correct format",
       "phone-format": "Phone must be in correct format",
-      "name-pattern": "Name may include only letters with no space",
-      "surname-pattern": "Surname may include only letters with no space",
+      "name-pattern": "Name may include only letters with and can't be only whitespace",
+      "surname-pattern": "Surname may include only letters with and can't be only whitespace",
       "telegram": "Telegram tag is required",
       "telegram-format": "Telegram tag must start with @",
       "agreement": "You must agree to the processing of provided personal data"
