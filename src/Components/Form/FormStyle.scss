@@ -18,6 +18,13 @@ $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   @media screen and (max-width: 600px){
     padding: 50px 0;
   }
+  .errorLink{
+    color: $clr-5;
+    opacity: .5;
+    &:visited{
+      color: $clr-5;
+    }
+  }
 }
 .agreementContainer{
   width: 80%;
@@ -153,16 +160,18 @@ $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   option {
     color: #000;
   }
-  .error{
+  .error,
+  .errorLink{
     color: rgba(133, 13, 13, 1);
     font-size: .9rem;
     text-align: start;
     opacity: .6;
     margin-bottom: 5px;
     align-self: start;
-    padding-left: 15px;
+    padding-left: 10%;
     position: relative;
     bottom: 6px;
-  }
+    }
+
 
   }
