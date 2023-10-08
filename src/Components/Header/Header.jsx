@@ -40,9 +40,13 @@ export default function Header() {
                 <div className="Navigation">
                     <article className="linksContainer">
                     <span className="navLinks">
-                        <Link to="/"  ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.home")}</p></Link>
+                        <Link to="/"  ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.main")}</p></Link>
+                        <Link to="/visa" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.resident-card")}</p></Link>
+                        <Link to="/aplication" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.aplications")}</p></Link>
+                        <Link to="/contact" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.contacts")}</p></Link>
+                        <Link to="/questions" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.questions")}</p></Link>
+                        <Link to="/pricement" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.pricement")}</p></Link>
                         <Link to="/about" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.about")}</p></Link>
-                        <Link to="/something" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.something")}</p></Link>
                     </span>
                     <button className="dropDownButton" onClick={()=>handleDropDown()}>
                         <FontAwesomeIcon icon={faX} size="xl" style={{color:"black"}}/>
@@ -57,8 +61,15 @@ export default function Header() {
                             <FontAwesomeIcon icon={faEnvelope} size="lg"/>
                             <a href = "mailto: abc@example.com">adc@example.com</a>
                         </span>
-                        <Button content={t("navigation.apply")} style={{alignSelf : "center",
-                        marginTop:"40px"}} />
+                        <Button
+                            content={<Link to="aplication"><p className="navBtnText" >{t("navigation.apply")}</p></Link>}
+                            style={{
+                                alignSelf : "center",
+                                marginTop:"40px"
+                        }}
+                            classN="navBtn"
+                            action={()=>handleDropDown()}
+                        />
                     </article>
                 </div>
             </Drawer>

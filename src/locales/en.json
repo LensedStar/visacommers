@@ -1,9 +1,13 @@
 {
   "navigation": {
-    "home":"Home",
-    "about":"About",
-    "something":"Something",
-    "apply":"Apply now"
+    "main": "Main page",
+    "about": "About us",
+    "resident-card": "Resident card",
+    "aplications": "Aplications",
+    "contacts": "Contacts",
+    "questions": "Questions",
+    "pricement": "Pricement",
+    "apply": "Apply now"
   },
   "main": {
     "title": "Visa in Slovenia",
@@ -13,12 +17,12 @@
   "form": {
     "title": "Apply now",
     "name": "Name",
-    "nationality":"Citizenship",
+    "nationality": "Citizenship",
     "surname": "Surname",
     "email": "Email",
     "phone": "Phone",
     "message": "Message",
-    "visaType":"Visa type",
+    "visaType": "Visa type",
     "vFast": "Fast visa.",
     "vStudy": "Study visa",
     "howContact": "How do you want us to contact you?",
@@ -28,23 +32,23 @@
     "contactSoon": "We will contact you soon.",
     "tgTag": "Telegram tag",
     "agreement": "I agree to the processing of provided personal data",
-    "error":{
-      "name": "Name is required",
-      "surname": "Surname is required",
-      "email": "Email is required",
-      "phone": "Phone is required",
+    "error": {
+      "agreement": "You must agree to the processing of provided personal data",
       "contact-method": "Contact method is required",
-      "visa-type": "Visa type is required",
       "country": "Citizenship is required",
+      "email": "Email is required",
+      "email-format": "Email must be in correct format",
       "max-length": "Its too long",
       "min-length": "Its too short",
-      "email-format": "Email must be in correct format",
-      "phone-format": "Phone must be in correct format",
+      "name": "Name is required",
       "name-pattern": "Name may include only letters with and can't be only whitespace",
+      "phone": "Phone is required",
+      "phone-format": "Phone must be in correct format",
+      "surname": "Surname is required",
       "surname-pattern": "Surname may include only letters with and can't be only whitespace",
       "telegram": "Telegram tag is required",
       "telegram-format": "Telegram tag must start with @",
-      "agreement": "You must agree to the processing of provided personal data"
+      "visa-type": "Visa type is required"
     }
   },
   "process": {
@@ -54,6 +58,6 @@
     "title": "Unite for Tomorrow!",
     "description-short": "In unity, we find strength. Together, we shape the future. Join hands, dream big, and make the world a better place. Together, we can achieve greatness.",
     "description-long": "In a world filled with diversity, it's our shared values that bind us together. We celebrate our differences and embrace our common goals. We stand united in the face of challenges, knowing that together we are unstoppable. Our collective strength transcends borders and languages. We extend a hand of friendship and cooperation to build a brighter future for all. Together, we can overcome any obstacle, for unity knows no boundaries.",
-    "description-short2":"In a world where cooperation fuels progress, our unity shines brightly. Together, we pave the way for a better world, where possibilities are endless. Join our global family and let's build a future of shared prosperity, love, and understanding. Together, we are unstoppable."
+    "description-short2": "In a world where cooperation fuels progress, our unity shines brightly. Together, we pave the way for a better world, where possibilities are endless. Join our global family and let's build a future of shared prosperity, love, and understanding. Together, we are unstoppable."
   }
 }

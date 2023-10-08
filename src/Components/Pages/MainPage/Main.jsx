@@ -21,6 +21,8 @@ import WhoBlock from "./WhoBlockMain/WhoBlock";
 import ProcessBlock from "./ProcessBlock/ProcessBlock";
 
 import ApplyForm from "../../Form/ApplyForm";
+
+import {Link as NavLink} from "react-router-dom";
 export default function Main() {
     const {t} = useTranslation();
     return(
@@ -30,7 +32,7 @@ export default function Main() {
                 <h1>{t("main.title")}</h1>
                 <h2>{t("mock.description-short")}</h2>
             </div>
-            <Button content={t("navigation.apply")} style={
+            <Button content={<NavLink to="/aplication"><p className="navBtnText" >{t("navigation.apply")}</p></NavLink>} style={
                 {width: "300px",
                 height: "50px"}
             } classN={"titleButton"}
