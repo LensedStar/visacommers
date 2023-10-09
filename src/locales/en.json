@@ -33,6 +33,7 @@
     "tgTag": "Telegram tag",
     "agreement": "I agree to the processing of provided personal data",
     "how-find": "How to find?",
+    "neeed-documents": "Documents needed",
     "error": {
       "agreement": "You must agree to the processing of provided personal data",
       "contact-method": "Contact method is required",

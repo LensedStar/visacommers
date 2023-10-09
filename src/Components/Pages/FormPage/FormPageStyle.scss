@@ -1,5 +1,73 @@
+
+$clr-1:rgb(248, 244, 242);
+$clr-2:rgb(121, 132, 139);
+$clr-3:rgb(142, 169, 174);
+$clr-4:rgb(130, 133, 142);
+$clr-5:rgb(52, 55, 66);
+
 .formPage{
-  padding-top: 200px;
-  .formTitle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .checkListsBlock{
+    @media screen and (min-width:700px){
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      align-content: center;
+    }
+  }
+  .checkList{
+    margin: 0 5% 70px 5%;
+    width: 90%;
+    box-shadow:rgba(0, 0, 0, 0.24) 0 3px 8px;
+    border-radius: 10px;
+    padding: 5% 5%;
+    position: relative;
+    background-color: $clr-1;
+    top:140px;
+    .vType2{
+      @media screen and (min-width: 700px){
+        border-left: solid 1px rgba(142, 169, 174,.4);
+      }
+    }
+    .checkListTitle{
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      justify-content: flex-start;
+
+      h2{
+        font-size: 1.2rem;
+        margin: 0 0 0 20px;
+      }
+    }
+    .checkListItems{
+      margin: 20px 0 0 0;
+      padding: 0 0 10px 0;
+      width: 100%;
+      .itemsTitle{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        border-bottom: solid 1px rgba(142, 169, 174,.4);
+        padding: 0 0 8px 20px;
+        p{
+          margin:0 0 0 15px;
+          font-weight: bold;
+        }
+      }
+      .dockList{
+        li{
+            margin: 10px 0 5px 50px;
+            list-style-type: disc;
+            font-size: 1rem;
+            font-style: italic;
+        }
+      }
+    }
   }
 }
+

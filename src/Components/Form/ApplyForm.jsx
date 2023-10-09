@@ -142,6 +142,12 @@ export default function ApplyForm() {
                             }
                         </select>
                         {errors.country && <span className="error">{t("form.error.country")}</span>}
+                        <select defaultValue="" {...register("type", {required: true})}>
+                            <option value="" hidden disabled>{t("form.visaType")}</option>
+                            <option value="study">{t("form.vFast")}</option>
+                            <option value="bussines">{t("form.vStudy")}</option>
+                        </select>
+                        {errors.type && <p className="error">{t("form.error.visa-type")}</p>}
                         <Controller
                             name="phone"
                             control={control}
@@ -180,12 +186,6 @@ export default function ApplyForm() {
                             })}/>
                         <ErrorMessage name={"email"} errors={errors}
                                       render={({message}) => <p className="error">{message}</p>}/>
-                        <select defaultValue="" {...register("type", {required: true})}>
-                            <option value="" hidden disabled>{t("form.visaType")}</option>
-                            <option value="study">{t("form.vFast")}</option>
-                            <option value="bussines">{t("form.vStudy")}</option>
-                        </select>
-                        {errors.type && <p className="error">{t("form.error.visa-type")}</p>}
                         <select defaultValue="" {...register("howContact", {required: true})}>
                             <option value="" hidden disabled>{t("form.howContact")}</option>
                             <option value="Telegram">Telegram</option>

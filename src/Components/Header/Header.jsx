@@ -62,7 +62,7 @@ export default function Header() {
                             <a href = "mailto: abc@example.com">adc@example.com</a>
                         </span>
                         <Button
-                            content={<Link to="aplication"><p className="navBtnText" >{t("navigation.apply")}</p></Link>}
+                            content={<Link to="/aplication"><p className="navBtnText" >{t("navigation.apply")}</p></Link>}
                             style={{
                                 alignSelf : "center",
                                 marginTop:"40px"
