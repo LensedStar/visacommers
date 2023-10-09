@@ -3,17 +3,20 @@ import React from "react";
 
 import { Route, Routes} from "react-router-dom";
 
+
 import Header from "./Components/Header/Header";
 import Main from "./Components/Pages/MainPage/Main";
 import About from "./Components/About";
 import Footer from "./Components/Footer/Footer";
 import FormPage from "./Components/Pages/FormPage/FormPage";
+import ScrollToTop from "./Components/ScrollToTop";
 
 export default function App() {
     return(
 
         <div className="App">
             <Header />
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Main/>} />
                 <Route path="/visa" element={<About />} />
