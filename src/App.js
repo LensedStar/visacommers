@@ -10,6 +10,7 @@ import About from "./Components/About";
 import Footer from "./Components/Footer/Footer";
 import FormPage from "./Components/Pages/FormPage/FormPage";
 import ScrollToTop from "./Components/ScrollToTop";
+import FAQ from "./Components/Pages/FAQ/FAQ";
 
 export default function App() {
     return(
@@ -22,7 +23,7 @@ export default function App() {
                 <Route path="/visa" element={<About />} />
                 <Route path="/aplication" element={<FormPage/>} />
                 <Route path="/contact" element={<About />} />
-                <Route path="/questions" element={<About />} />
+                <Route path="/questions" element={<FAQ />} />
                 <Route path="/pricement" element={<About />} />
                 <Route path="/about" element={<About />} />
             </Routes>
