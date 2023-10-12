@@ -22,7 +22,6 @@ export default function App() {
                 <Route path="/" element={<Main/>} />
                 <Route path="/visa" element={<About />} />
                 <Route path="/aplication" element={<FormPage/>} />
-                <Route path="/contact" element={<About />} />
                 <Route path="/questions" element={<FAQ />} />
                 <Route path="/pricement" element={<About />} />
                 <Route path="/about" element={<About />} />

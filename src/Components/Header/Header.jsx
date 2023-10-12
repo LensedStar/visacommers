@@ -43,7 +43,6 @@ export default function Header() {
                         <Link to="/"  ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.main")}</p></Link>
                         <Link to="/visa" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.resident-card")}</p></Link>
                         <Link to="/aplication" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.aplications")}</p></Link>
-                        <Link to="/contact" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.contacts")}</p></Link>
                         <Link to="/questions" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.questions")}</p></Link>
                         <Link to="/pricement" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.pricement")}</p></Link>
                         <Link to="/about" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.about")}</p></Link>

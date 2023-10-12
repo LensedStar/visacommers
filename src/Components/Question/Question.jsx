@@ -16,10 +16,10 @@ export default function Question({question,answer,key}){
         setShowAnswer(!showAnswer)
     }
     return(
-        <div className="faq" key={key}>
+        <div className="faq" key={key} onClick={()=>handleClick()}>
             <span className="questionText">
                 <p>{question}</p>
-                <motion.button
+                <motion.span
                     variants={{
                         rotate:{rotate: 180},
                         stop:{rotate: 0}
@@ -27,16 +27,15 @@ export default function Question({question,answer,key}){
 
                     type="button"
                     className="answerBttn"
-                    onClick={()=>handleClick()}
-                    whileTap={{scale: 1.3}}
+                    whileTap={{scale: 1.8}}
                     animate={showAnswer ? "rotate" : "stop"}
                     transition={{
                         type:"tween",
-                        duration: 0.5,
+                        duration: .7,
                     }}
                 >
                     <FontAwesomeIcon icon={faAngleDown} size="xl" style={{color: "#000000"}} />
-                </motion.button>
+                </motion.span>
             </span>
                 <motion.span
                     variants={{
@@ -46,7 +45,7 @@ export default function Question({question,answer,key}){
                     animate={showAnswer ? "visible" : "hidden"}
                     transition={{
                         type:"spring",
-                        duration: 0.5,
+                        duration: 0.7,
                     }}
                 className="answerText"
             ><p>{answer}</p></motion.span>

@@ -6,6 +6,9 @@ $clr-4:rgb(130, 133, 142);
 $clr-5:rgb(52, 55, 66);
 
 .button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 40px;
   border-radius: 5px;
   width: 200px;
@@ -22,5 +25,7 @@ $clr-5:rgb(52, 55, 66);
   }
   *{
     text-decoration: none;
+    margin: 0;
+    padding: 0;
   }
 }
