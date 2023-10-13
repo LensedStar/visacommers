@@ -6,7 +6,7 @@ import { Route, Routes} from "react-router-dom";
 
 import Header from "./Components/Header/Header";
 import Main from "./Components/Pages/MainPage/Main";
-import About from "./Components/About";
+import About from "./Components/Pages/About/About";
 import Footer from "./Components/Footer/Footer";
 import FormPage from "./Components/Pages/FormPage/FormPage";
 import ScrollToTop from "./Components/ScrollToTop";
