@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 
 import {Link} from "react-router-dom";
 
@@ -16,24 +16,31 @@ import SelectLocale from "./SelectLocale";
 
 import Button from "../Button/Button";
 
+import Logo from "./images/HeaderLogo.png";
+
+
 export default function Header() {
     const [open, setOpen] = useState(false);
     const {t,} = useTranslation();
-
     const handleDropDown = () => {
         setOpen(!open);
     };
 
-    const [theme, setTheme] = useState('light')
-    useEffect(() =>
+   /* const [theme, setTheme] = useState('light')*/
+   /* seEffect(() =>
     {
         if(window.matchMedia('(prefers-color-scheme: dark)').matches)
             setTheme('dark')
-    },[])
+    },[])*/
     return(
+        <header>
         <nav className="nav">
-            {theme === 'light' && <><p>Light</p></> || theme === 'dark' && <><p>Dark</p></>}
-            <SelectLocale />
+            <span className="localenLogo">
+            <span className="headerLogo">
+                <img className="headerLogoImg" alt="logo" src={Logo}/>
+                <p className="LogoText">GAMASRON INC.</p>
+            </span>
+            </span>
            <button className="dropDownButton" onClick={()=>handleDropDown()}>
             <FontAwesomeIcon className="DropDown" icon={faBars} size="xl" style={{color:"black"}}/>
            </button>
@@ -81,5 +88,7 @@ export default function Header() {
                 </div>
             </Drawer>
         </nav>
+        <SelectLocale />
+        </header>
     )
 }

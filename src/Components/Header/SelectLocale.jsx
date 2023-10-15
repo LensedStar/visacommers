@@ -1,14 +1,16 @@
-import React,{useState} from "react";
+import React, {useState} from "react";
 
 import { FormControl,Select,MenuItem } from '@mui/material';
 
 import {useTranslation} from "react-i18next";
 
-import ukFlag from "./flags/ukFlag.png";
+import ukFlag from "./images/ukFlag.png";
 
-import rusFlag from "./flags/rusFlag.png";
+import rusFlag from "./images/rusFlag.png";
 
-import uaFlag from "./flags/uaFlag.png";
+import uaFlag from "./images/uaFlag.png";
+import { motion } from "framer-motion";
+import {useScroll,useMotionValueEvent} from "framer-motion";
 
 
 export default function SelectLocale() {
@@ -19,9 +21,23 @@ export default function SelectLocale() {
         localStorage.setItem("lang",event.target.value);
         i18n.changeLanguage(event.target.value)
     }
-
+    const [showSelector,setShowSelector] = useState(false)
+    const {scrollY} = useScroll();
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        latest > 500 ? setShowSelector(true) : setShowSelector(false)
+    })
     return(
-     <div className="localSelector">
+     <motion.div
+         className="localSelector"
+         variants={{
+             hidden:{height:0},
+             visible:{height:40}
+         }}
+         animate={showSelector ? "hidden":"visible" }
+            transition={{
+                duration: .5,
+            }}
+     >
          <FormControl>
            <Select
            value = {lang}
@@ -51,6 +67,6 @@ export default function SelectLocale() {
                </MenuItem>
            </Select>
          </FormControl>
-     </div>
+     </motion.div>
     )
 }

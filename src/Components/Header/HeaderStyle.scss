@@ -16,6 +16,15 @@ $clr-5:rgb(52, 55, 66);
   font-family: 'Ubuntu', sans-serif;
 }
 
+header{
+  height:fit-content;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
 .nav {
   min-height: 70px;
   width: 100%;
@@ -24,11 +33,17 @@ $clr-5:rgb(52, 55, 66);
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   margin: 0 0 0 0;
-  padding: 0 15px;
-  position: fixed;
+  padding: 0 10px;
   height: 50px;
   background-color: $clr-1;
   z-index: 1000;
+
+  .localenLogo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+  }
 }
 .dropDownButton{
   margin: 0 20px 0 0;
@@ -100,7 +115,6 @@ $clr-5:rgb(52, 55, 66);
     .dropDownButton {
       justify-self: end;
       margin-top: 20px;
-      margin-right: 15px;
     }
 
     .navLinks {
@@ -133,28 +147,58 @@ $clr-5:rgb(52, 55, 66);
     }
   }
 }
-.langSelector{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  .flagImg{
-      width: 30px;
-      height: 30px;
-      margin: 0 2px 0 0;
-  }
-  p{
-    margin: 0 5px 0 0;
-  }
+.localSelector{
+  width: 100%;
+  background-color: $clr-1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 40px;
+  overflow: hidden;
 }
 .navBtnText{
   color: $clr-1!important;
 }
 
-.MuiSelect-select.MuiSelect-select{
+.MuiFormControl-root{
+  border-radius: 5px;
   border: none!important;
 }
-.MuiSvgIcon-root{
-  color: black!important;
-  margin: 0 0 0 10px!important;
+.MuiOutlinedInput-notchedOutline{
+  border: none!important;
+}
+.headerLogo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right:30px;
+  .headerLogoImg{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    z-index: -9999;
+
+  }
+  .LogoText{
+    font-weight: bold;
+    font-size: .8rem;
+    position: relative;
+    bottom: 40px;
+  }
+}
+
+.langSelector {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: start;
+  p {
+    margin: 0 5px 0 0;
+  }
+.flagImg {
+  width: 30px;
+  height: 30px;
+  margin: 0 2px 0 0;
+}
 }
 
