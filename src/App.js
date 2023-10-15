@@ -14,7 +14,6 @@ import FAQ from "./Components/Pages/FAQ/FAQ";
 
 export default function App() {
     return(
-
         <div className="App">
             <Header />
             <ScrollToTop />

@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, {useEffect, useState} from "react";
 
 import {Link} from "react-router-dom";
 
@@ -23,8 +23,16 @@ export default function Header() {
     const handleDropDown = () => {
         setOpen(!open);
     };
+
+    const [theme, setTheme] = useState('light')
+    useEffect(() =>
+    {
+        if(window.matchMedia('(prefers-color-scheme: dark)').matches)
+            setTheme('dark')
+    },[])
     return(
         <nav className="nav">
+            {theme === 'light' && <><p>Light</p></> || theme === 'dark' && <><p>Dark</p></>}
             <SelectLocale />
            <button className="dropDownButton" onClick={()=>handleDropDown()}>
             <FontAwesomeIcon className="DropDown" icon={faBars} size="xl" style={{color:"black"}}/>
