@@ -140,11 +140,21 @@ $clr-5:rgb(52, 55, 66);
   .flagImg{
       width: 30px;
       height: 30px;
-      margin: 0 20px 0 0;
+      margin: 0 2px 0 0;
+  }
+  p{
+    margin: 0 5px 0 0;
   }
 }
 .navBtnText{
   color: $clr-1!important;
 }
 
+.MuiSelect-select.MuiSelect-select{
+  border: none!important;
+}
+.MuiSvgIcon-root{
+  color: black!important;
+  margin: 0 0 0 10px!important;
+}
 

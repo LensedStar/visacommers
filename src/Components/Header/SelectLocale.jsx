@@ -25,11 +25,17 @@ export default function SelectLocale() {
          <FormControl>
            <Select
            value = {lang}
-           onChange={handleChange}>
-               <MenuItem value="en">
+           onChange={handleChange}
+           sx={{
+               width:90,
+               height:40
+           }}
+           >
+               <MenuItem value="en"
+               >
                    <span className="langSelector">
                        <img src={ukFlag} alt="ukFlag" className="flagImg"/>
-                       <p>EN</p>
+                       <p>UK</p>
                    </span>
                    </MenuItem>
                <MenuItem value="ru">
@@ -40,7 +46,7 @@ export default function SelectLocale() {
                <MenuItem value="ua">
                    <span className="langSelector">
                        <img src={uaFlag} alt="uaFlag" className="flagImg"/>
-                      <p>UA</p>
+                       <p>UA</p>
                    </span>
                </MenuItem>
            </Select>
