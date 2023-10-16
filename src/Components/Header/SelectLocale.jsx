@@ -15,7 +15,7 @@ import {useScroll,useMotionValueEvent} from "framer-motion";
 
 export default function SelectLocale() {
     const [lang,setLang] = useState(localStorage.getItem("lang")?localStorage.getItem("lang"):"en");
-    const {i18n} = useTranslation();
+    const {i18n,t} = useTranslation();
     const handleChange = (event) => {
         setLang(event.target.value);
         localStorage.setItem("lang",event.target.value);
@@ -31,20 +31,22 @@ export default function SelectLocale() {
          className="localSelector"
          variants={{
              hidden:{height:0},
-             visible:{height:40}
+             visible:{height:50}
          }}
          animate={showSelector ? "hidden":"visible" }
             transition={{
                 duration: .5,
             }}
      >
+         <p className="langTitle">{t("navigation.selectLang")}</p>
          <FormControl>
            <Select
            value = {lang}
            onChange={handleChange}
            sx={{
                width:90,
-               height:40
+               height:50,
+               marginLeft:"5px"
            }}
            >
                <MenuItem value="en"

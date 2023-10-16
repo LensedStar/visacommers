@@ -148,11 +148,17 @@ header{
   }
 }
 .localSelector{
+  padding: 0 20px;
   width: 100%;
   background-color: $clr-1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  height: 40px;
   overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .langTitle{
+    opacity: .5;
+  }
 }
 .navBtnText{
   color: $clr-1!important;
