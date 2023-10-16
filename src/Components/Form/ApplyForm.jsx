@@ -30,6 +30,7 @@ import { motion,AnimatePresence } from "framer-motion";
 
 import iconDone from "./DoneImg/iconDone.svg";
 
+import Hcaptcha from "@hcaptcha/react-hcaptcha";
 export default function ApplyForm() {
     const {t, i18n} = useTranslation();
     const {
@@ -226,6 +227,10 @@ export default function ApplyForm() {
                         </span>
                         {errors.agreement && <p className="error">{t("form.error.agreement")}</p>}
                         <Button type="submit" content={t("form.submit")} classN="subBtn"/>
+                        <Hcaptcha
+                            site-key="bf9a31ef-6f77-4af8-9a49-8bae5c7be0e8"
+                            onVerify={(token,ekey)=>console.log(token,ekey)}
+                        />
                     </motion.form>
                     }
                 </div>
