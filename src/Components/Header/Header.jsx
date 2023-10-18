@@ -37,7 +37,9 @@ export default function Header() {
         <nav className="nav">
             <span className="localenLogo">
             <span className="headerLogo">
-                <img className="headerLogoImg" alt="logo" src={Logo}/>
+                <Link to="/">
+                    <img className="headerLogoImg" alt="logo" src={Logo}/>
+                </Link>
                 <p className="LogoText">GAMASRON INC.</p>
             </span>
             </span>
