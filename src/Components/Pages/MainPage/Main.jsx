@@ -30,7 +30,7 @@ export default function Main() {
         <main>
             <div className="bannerText">
                 <h1>{t("main.title")}</h1>
-                <h2>{t("mock.description-short")}</h2>
+                <h2>{t("main.description")}</h2>
             </div>
             <Button content={<NavLink to="/aplication"><p className="navBtnText" >{t("navigation.apply")}</p></NavLink>} style={
                 {width: "300px",
