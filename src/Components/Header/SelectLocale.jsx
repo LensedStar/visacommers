@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 import { FormControl,Select,MenuItem } from '@mui/material';
 
@@ -14,13 +14,31 @@ import {useScroll,useMotionValueEvent} from "framer-motion";
 
 
 export default function SelectLocale() {
-    const [lang,setLang] = useState(localStorage.getItem("lang")?localStorage.getItem("lang"):"en");
+    const [lang,setLang] = useState(localStorage.getItem("lang"))
+
     const {i18n,t} = useTranslation();
+
     const handleChange = (event) => {
         setLang(event.target.value);
         localStorage.setItem("lang",event.target.value);
         i18n.changeLanguage(event.target.value)
-    }
+    };
+
+    useEffect(()=>{
+        if(!localStorage.getItem("lang")){
+        if(navigator.language === "ru-RU"){
+            localStorage.setItem("lang","ru");
+            i18n.changeLanguage("ru")
+        }else if(navigator.language === "uk-UA"){
+            localStorage.setItem("lang","ua");
+            i18n.changeLanguage("ua")
+        }else{
+            localStorage.setItem("lang","en");
+            i18n.changeLanguage("en")
+        }
+        }
+    },[])
+
     const [showSelector,setShowSelector] = useState(false)
     const {scrollY} = useScroll();
     useMotionValueEvent(scrollY, "change", (latest) => {
