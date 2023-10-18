@@ -57,12 +57,14 @@
   },
   "navigation": {
     "main": "Головна",
+    "study": "Навчання",
+    "middle": "Середня школа",
+    "high": "Університет",
+    "business": "Бізнес",
+    "additional": "Додаткові послуги",
     "about": "Про нас",
-    "resident-card": "ВНЖ",
-    "aplications": "Заявки",
     "contacts": "Контакти",
     "questions": "Питання",
-    "pricement": "Ціни",
     "apply": "Записатись",
     "selectLang": "Выберете язык УКР: "
   },

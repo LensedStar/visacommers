@@ -57,13 +57,15 @@
     "title": "Как с нами связаться?"
   },
   "navigation": {
-    "main":"Главная",
-    "about":"О нас",
-    "resident-card": "ВНЖ",
-    "aplications": "Заявка",
-    "contacts": "Контакты",
+    "main": "Главная",
+    "study": "Учеба",
+    "middle": "Средняя школа",
+    "high": "Университет",
+    "business": "Бизнес",
+    "additional": "Доп. Услуги",
+    "about": "О нас",
+    "contacts": "Контакт",
     "questions": "Вопросы",
-    "pricement": "Ценник",
     "apply":"Подать заявку",
     "selectLang": "Выберете язык: "
   },

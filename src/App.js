@@ -19,11 +19,13 @@ export default function App() {
             <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Main/>} />
-                <Route path="/visa" element={<About />} />
-                <Route path="/aplication" element={<FormPage/>} />
-                <Route path="/questions" element={<FAQ />} />
-                <Route path="/pricement" element={<About />} />
-                <Route path="/about" element={<About />} />
+                <Route path="/study" element={<About />} />
+                <Route path="/hight" element={<FormPage/>} />
+                <Route path="/middle" element={<FAQ />} />
+                <Route path="/aditional" element={<About />} />
+                <Route path="/abbout" element={<About />} />
+                <Route path="/contacts" element={<About />} />
+                <Route path="/faq" element={<FAQ />} />
             </Routes>
             <Footer />
         </div>

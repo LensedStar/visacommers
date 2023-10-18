@@ -6,9 +6,9 @@ import "./HeaderStyle.scss";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-import { faBars,faX,faPhone,faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {faBars, faX, faPhone, faEnvelope, faAngleDown} from '@fortawesome/free-solid-svg-icons';
 
-import { Drawer } from '@mui/material';
+import {Drawer} from '@mui/material';
 
 import {useTranslation} from "react-i18next";
 
@@ -17,6 +17,8 @@ import SelectLocale from "./SelectLocale";
 import Button from "../Button/Button";
 
 import Logo from "./images/HeaderLogo.png";
+
+import {motion} from "framer-motion";
 
 
 export default function Header() {
@@ -32,6 +34,9 @@ export default function Header() {
         if(window.matchMedia('(prefers-color-scheme: dark)').matches)
             setTheme('dark')
     },[])*/
+
+    const [showLinks, setShowLinks] = useState(false);
+
     return(
         <header>
         <nav className="nav">
@@ -57,12 +62,51 @@ export default function Header() {
                 <div className="Navigation">
                     <article className="linksContainer">
                     <span className="navLinks">
-                        <Link to="/"  ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.main")}</p></Link>
-                        <Link to="/visa" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.resident-card")}</p></Link>
-                        <Link to="/aplication" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.aplications")}</p></Link>
+                        <Link to="/" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.main")}</p></Link>
+                        <Link to="/business" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.business")}</p></Link>
+                        <span className="navDropdown" onClick={()=>setShowLinks(!showLinks)}>
+                            <span className="navDropdownButton">
+                                <p role="button" className="navLink " >{t("navigation.study")}</p>
+                                  <motion.span
+                                      className="navDropdownButtonArrow"
+                                      variants={{
+                                          rotate:{rotate: 180},
+                                          stop:{rotate: 0}
+                                      }}
+
+                                      type="button"
+                                      whileTap={{scale: 1.8}}
+                                      animate={showLinks ? "rotate" : "stop"}
+                                      transition={{
+                                          type:"tween",
+                                          duration: .5,
+                                      }}
+                                  >
+                    <FontAwesomeIcon icon={faAngleDown}  style={{color: "#000000"}} />
+                </motion.span>
+                            </span>
+                            <motion.div
+                                className="navDropdownLinks"
+                                variants={{
+                                    open: { height: "fit-content", opacity:1},
+                                    closed: { height:0, opacity:0, margin:0}
+                                }}
+                                transition={{
+                                    type:"linear",
+                                    duration: .5,
+                                }}
+                                animate={showLinks ? "open" : "closed"}
+                            >
+                                        <>
+                                        <Link to="/" ><p onClick={()=>handleDropDown()} className="navLink navLinkDropDown navLinkDropDown1">{t("navigation.middle")}</p></Link>
+                                        <Link to="/" ><p onClick={()=>handleDropDown()} className="navLink navLinkDropDown navLinkDropDown2">{t("navigation.high")}</p></Link>
+                                        </>
+                            </motion.div>
+                        </span>
+                        <Link to="/questions" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.additional")}</p></Link>
+                        <Link to="/additional" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.about")}</p></Link>
                         <Link to="/questions" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.questions")}</p></Link>
-                        <Link to="/pricement" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.pricement")}</p></Link>
-                        <Link to="/about" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.about")}</p></Link>
+                        <Link to="/about" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.contacts")}</p></Link>
                     </span>
                     <button className="dropDownButton" onClick={()=>handleDropDown()}>
                         <FontAwesomeIcon icon={faX} size="xl" style={{color:"black"}}/>

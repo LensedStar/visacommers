@@ -1,13 +1,15 @@
 {
   "navigation": {
-    "main": "Main page",
+    "main": "Main",
+    "study": "Study",
+    "middle": "Middle school",
+    "high": "University",
+    "business": "Business",
+    "additional": "Aditional Services",
     "about": "About us",
-    "resident-card": "Resident card",
-    "aplications": "Aplications",
     "contacts": "Contacts",
+    "apply": "Connect with us",
     "questions": "Questions",
-    "pricement": "Pricement",
-    "apply": "Apply now",
     "selectLang": "Select language: "
   },
   "main": {
@@ -35,7 +37,7 @@
     "tgTag": "Telegram tag",
     "agreement": "I agree to the processing of provided personal data",
     "how-find": "How to find?",
-    "neeed-documents": "Documents needed",
+    "need-documents": "Documents needed",
     "error": {
       "agreement": "You must agree to the processing of provided personal data",
       "contact-method": "Contact method is required",

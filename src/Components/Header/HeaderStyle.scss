@@ -59,11 +59,52 @@ header{
 .Navigation{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   height: 100%;
   padding-bottom: 40%;
   background-color: $clr-1;
+
+  .navDropdown{
+    margin: 20px 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    .navLinkDropDown{
+      margin-top: 0!important;
+    }
+  }
+
+  .navDropdownButtonArrow{
+    opacity: .6;
+    margin-left: 20px;
+  }
+  .navDropdownButton{
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .navDropdownLinks{
+    font-size: 1.1rem!important;
+    overflow: hidden;
+    padding: 0 0 0 20px;
+    margin-top: 10px;
+    p{
+      font-size: 1.1rem!important;
+      margin: 18px 0;
+    }
+  }
+
+  .navLinkDropDown1{
+    padding-top:10px!important;
+  }
+
+  .navLinkDropDown2{
+    margin-bottom:0!important;
+  }
+
   .contacts {
     width: 100%;
     height: 200px;
@@ -137,7 +178,6 @@ header{
 
       .navLink {
         font-size: 1.3rem;
-        margin-top: 5px;
         opacity: .6;
 
         &:visited {
