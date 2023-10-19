@@ -45,7 +45,7 @@ export default function Header() {
                 <Link to="/">
                     <img className="headerLogoImg" alt="logo" src={Logo}/>
                 </Link>
-                <p className="LogoText">GAMASRON INC.</p>
+                <p className="LogoText">Visa S<b className="love">love</b>nia</p>
             </span>
             </span>
            <button className="dropDownButton" onClick={()=>handleDropDown()}>

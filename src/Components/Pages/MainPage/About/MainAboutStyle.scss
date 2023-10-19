@@ -20,29 +20,33 @@ $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   z-index: -999!important;
   @media screen and (min-width: 900px){
     padding: 0 20%;
+    flex-direction: row;
   }
   .aboutText{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     border-radius: 10px;
     background-color: $clr-4;
     padding: 20px 20px;
     width: 80%;
     color: $clr-1;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
     margin-top: 50px;
     background-position: center;
     background-size: cover;
     min-height:400px;
+    align-self: center;
     @media screen and (min-width: 900px){
       width: 70%;
+    }
+    @media screen and (min-width: 900px){
+      margin:0 30px ;
     }
 
   }
   .aboutText1{
-    align-self: end;
     background-image: url("./MainAbouIMG/businessBlur.jpg");
     @media screen and (max-width: 900px){
       align-self: end;
