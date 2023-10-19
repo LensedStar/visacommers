@@ -98,15 +98,15 @@ export default function Header() {
                                 animate={showLinks ? "open" : "closed"}
                             >
                                         <>
-                                        <Link to="/" ><p onClick={()=>handleDropDown()} className="navLink navLinkDropDown navLinkDropDown1">{t("navigation.middle")}</p></Link>
-                                        <Link to="/" ><p onClick={()=>handleDropDown()} className="navLink navLinkDropDown navLinkDropDown2">{t("navigation.high")}</p></Link>
+                                        <Link to="/middle_education" ><p onClick={()=>handleDropDown()} className="navLink navLinkDropDown navLinkDropDown1">{t("navigation.middle")}</p></Link>
+                                        <Link to="/high_education" ><p onClick={()=>handleDropDown()} className="navLink navLinkDropDown navLinkDropDown2">{t("navigation.high")}</p></Link>
                                         </>
                             </motion.div>
                         </span>
-                        <Link to="/questions" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.additional")}</p></Link>
-                        <Link to="/additional" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.about")}</p></Link>
-                        <Link to="/questions" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.questions")}</p></Link>
-                        <Link to="/about" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.contacts")}</p></Link>
+                        <Link to="/additionalservises" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.additional")}</p></Link>
+                        <Link to="/about" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.about")}</p></Link>
+                        <Link to="/faq" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.questions")}</p></Link>
+                        <Link to="/contacts" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.contacts")}</p></Link>
                     </span>
                     <button className="dropDownButton" onClick={()=>handleDropDown()}>
                         <FontAwesomeIcon icon={faX} size="xl" style={{color:"black"}}/>
