@@ -6,6 +6,7 @@ $clr-4:rgb(130, 133, 142);
 $clr-5:rgb(52, 55, 66);
 $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
+
 .about{
   margin-top: 40px;
   height: fit-content;
@@ -16,10 +17,15 @@ $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   justify-content: center;
   align-items: center;
   padding: 0 10px;
+  z-index: -999!important;
   @media screen and (min-width: 900px){
     padding: 0 20%;
   }
   .aboutText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     border-radius: 10px;
     background-color: $clr-4;
     padding: 20px 20px;
@@ -27,6 +33,9 @@ $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     color: $clr-1;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-top: 50px;
+    background-position: center;
+    background-size: cover;
+    min-height:400px;
     @media screen and (min-width: 900px){
       width: 70%;
     }
@@ -34,6 +43,7 @@ $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   .aboutText1{
     align-self: end;
+    background-image: url("./MainAbouIMG/businessBlur.jpg");
     @media screen and (max-width: 900px){
       align-self: end;
     }
@@ -41,8 +51,51 @@ $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   .aboutText2{
     align-self: start;
+    background-image: url("./MainAbouIMG/highBlur.jpg");
     @media screen and (max-width: 900px){
       align-self: start;
     }
+  }
+  .aboutText3{
+    background-image: url("./MainAbouIMG/middleBlur.jpg")!important;
+  }
+  a{
+    width: 100%;
+  }
+  .aboutLink{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,.45);
+    backdrop-filter: blur(5px);
+    box-shadow:rgba(0, 0, 0, 0.24) 0 3px 8px;
+    &:active{
+      background-color: rgba(255,255,255,1);
+    }
+  }
+  a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    p{
+      color: black!important;
+    }
+    &:active{
+      color: black;
+    }
+  }
+  h2{
+    color: rgba(255,255,255,1);
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  li{
+    color: rgba(255,255,255,1);
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
   }
 }

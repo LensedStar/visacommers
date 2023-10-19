@@ -4,7 +4,13 @@ import { motion } from "framer-motion";
 
 import {useTranslation} from "react-i18next";
 
+import {Link} from "react-router-dom";
+
 import "./MainAboutStyle.scss";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function MainAbout() {
 const {t} = useTranslation();
@@ -19,7 +25,6 @@ const {t} = useTranslation();
                     }}
                     whileInView={{
                         opacity:1,
-                        zIndex:-1000,
                         x:0,
                     }}
                     transition={{
@@ -27,10 +32,21 @@ const {t} = useTranslation();
                     }}
                     viewport={{once:true}}
                 >
-                    <h2>{t("mock.title")}</h2>
-                    <p>
-                        {t("mock.description-long")}
-                    </p>
+                    <span>
+                        <h2>{t("mock.title")}</h2>
+                         <ul>
+                            <li>{t("mock.title")}</li>
+                            <li>{t("mock.title")}</li>
+                            <li>{t("mock.title")}</li>
+                            <li>{t("mock.title")}</li>
+                        </ul>
+                    </span>
+                    <Link to="/business">
+                        <span className="aboutLink">
+                            <p className="aboutLinkTitle">{t("about.learnMore")}</p>
+                            <FontAwesomeIcon icon={faArrowRight} size="xl" style={{color: "#000000",}} />
+                        </span>
+                    </Link>
                 </motion.div>
 
             <motion.div
@@ -42,7 +58,6 @@ const {t} = useTranslation();
                 }}
                 whileInView={{
                     opacity:1,
-                    zIndex:-1000,
                     x:0,
                 }}
                 transition={{
@@ -50,22 +65,32 @@ const {t} = useTranslation();
                 }}
                 viewport={{once:true}}
             >
-                <h2>{t("mock.title")}</h2>
-                <p>
-                    {t("mock.description-long")}
-                </p>
+                 <span>
+                        <h2>{t("mock.title")}</h2>
+                          <ul>
+                            <li>{t("mock.title")}</li>
+                            <li>{t("mock.title")}</li>
+                            <li>{t("mock.title")}</li>
+                            <li>{t("mock.title")}</li>
+                        </ul>
+                 </span>
+                <Link to="/high_education">
+                        <span className="aboutLink">
+                            <p className="aboutLinkTitle">{t("about.learnMore")}</p>
+                            <FontAwesomeIcon icon={faArrowRight} size="xl" style={{color: "#000000",}} />
+                        </span>
+                </Link>
             </motion.div>
 
             <motion.div
                 key={3}
-                className="aboutText aboutText1"
+                className="aboutText aboutText1 aboutText3"
                 initial={{
                     opacity:0,
                     x:-200
                 }}
                 whileInView={{
                     opacity:1,
-                    zIndex:-1000,
                     x:0,
                 }}
                 transition={{
@@ -73,10 +98,21 @@ const {t} = useTranslation();
                 }}
                 viewport={{once:true}}
             >
-                <h2>{t("mock.title")}</h2>
-                <p>
-                    {t("mock.description-long")}
-                </p>
+               <span>
+                        <h2>{t("mock.title")}</h2>
+                        <ul>
+                            <li>{t("mock.title")}</li>
+                            <li>{t("mock.title")}</li>
+                            <li>{t("mock.title")}</li>
+                            <li>{t("mock.title")}</li>
+                        </ul>
+               </span>
+                <Link to="/middle_education">
+                        <span className="aboutLink">
+                            <p className="aboutLinkTitle">{t("about.learnMore")}</p>
+                            <FontAwesomeIcon icon={faArrowRight} size="xl" style={{color: "#000000",}} />
+                        </span>
+                </Link>
             </motion.div>
 
         </div>

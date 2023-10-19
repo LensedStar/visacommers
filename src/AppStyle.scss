@@ -30,8 +30,12 @@ body{
   a{
   color: black;
   text-decoration: none;
+  outline: none;
   &:visited{
     color: black;
+  }
+  &:active{
+    background-color: transparent;
   }
   *{
     text-decoration: none!important;
