@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useRef} from "react";
 
 import { motion } from "framer-motion";
 
@@ -13,16 +13,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function MainAbout() {
+    const windowWidth = useRef(window.innerWidth);
+    const animations ={
+        phone:{
+            opacity:0,
+            x:-200
+        },
+        phone2:{
+            opacity:0,
+            x:200
+        },
+        desktop:{
+            opacity: 0,
+        }
+    }
 const {t} = useTranslation();
     return(
         <div className="about" id="mainAbout">
                 <motion.div
                     key={1}
                     className="aboutText aboutText1"
-                    initial={{
-                        opacity:0,
-                        x:-200
-                    }}
+                    initial={
+                        windowWidth.current < 900 ? animations.phone : animations.desktop
+                    }
                     whileInView={{
                         opacity:1,
                         x:0,
@@ -52,10 +65,9 @@ const {t} = useTranslation();
             <motion.div
                 key={2}
                 className="aboutText aboutText2"
-                initial={{
-                    opacity:0,
-                    x:200
-                }}
+                initial={
+                    windowWidth.current < 900 ? animations.phone2 : animations.desktop
+                }
                 whileInView={{
                     opacity:1,
                     x:0,
@@ -85,10 +97,9 @@ const {t} = useTranslation();
             <motion.div
                 key={3}
                 className="aboutText aboutText1 aboutText3"
-                initial={{
-                    opacity:0,
-                    x:-200
-                }}
+                initial={
+                windowWidth.current < 900 ? animations.phone : animations.desktop
+            }
                 whileInView={{
                     opacity:1,
                     x:0,
