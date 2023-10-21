@@ -21,13 +21,16 @@
     justify-items: center;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 30px;
-    grid-row-gap: 20px;
+    grid-row-gap: 0;
     background-color: rgba(255,255, 255, 0.65);
     font-weight: 600;
     @media (min-width: 900px) {
       grid-template-columns: repeat(4, 1fr);
       padding: 100px;
+      grid-column-gap: 30px;
+      grid-row-gap: 20px;
     }
+
   }
   .plus{
     display: flex;
@@ -50,13 +53,13 @@
       text-align: center;
       margin: 10px 0;
       @media (max-width: 900px){
-       font-size: .7rem;
+       font-size: .8rem;
       }
     }
     p{
       text-align: center;
       @media screen and (max-width: 900px){
-        font-size: .5rem;
+        font-size: .7rem;
       }
 
       }
