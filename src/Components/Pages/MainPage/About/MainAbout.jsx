@@ -29,7 +29,11 @@ export default function MainAbout() {
     }
 const {t} = useTranslation();
     return(
-        <div className="about" id="mainAbout">
+        <div className="mainAboutContainer">
+            <span className="mainAboutLogo">
+                <h1>{t("mock.title")}</h1>
+            </span>
+            <div className="about" id="mainAbout">
                 <motion.div
                     key={1}
                     className="aboutText aboutText1"
@@ -125,7 +129,7 @@ const {t} = useTranslation();
                         </span>
                 </Link>
             </motion.div>
-
+            </div>
         </div>
     )
 }

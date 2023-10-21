@@ -9,12 +9,6 @@ $clr-2:rgb(121, 132, 139);
 $clr-3:rgb(142, 169, 174);
 $clr-4:rgb(130, 133, 142);
 $clr-5:rgb(52, 55, 66);
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Ubuntu', sans-serif;
-}
 
 header{
   height:fit-content;
@@ -220,8 +214,8 @@ header{
   align-items: center;
   margin-right:30px;
   .headerLogoImg{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 90px;
     position: relative;
     z-index: -9999;
   }

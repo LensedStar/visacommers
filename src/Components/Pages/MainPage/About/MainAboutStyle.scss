@@ -7,6 +7,18 @@ $clr-5:rgb(52, 55, 66);
 $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 
+.mainAboutContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin:0 0 100px 0;
+  .mainAboutLogo{
+    margin: 50px 0 0 0;
+  }
+
+}
+
 .about{
   margin-top: 40px;
   height: fit-content;
@@ -17,7 +29,6 @@ $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   justify-content: center;
   align-items: center;
   padding: 0 10px;
-  z-index: -999!important;
   @media screen and (min-width: 900px){
     padding: 0 5%;
     flex-direction: row;

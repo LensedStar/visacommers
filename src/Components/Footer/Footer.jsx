@@ -35,6 +35,9 @@ export default function Footer() {
             <span className="allRights">
                 <p>All rights reserved © 2023</p>
             </span>
+            <span className="iconsLink">
+                Some icons were taken from <a href="https://www.icons8.com" rel="noreferrer" target="_blank" >icon8</a>
+            </span>
         </footer>
     )
 }

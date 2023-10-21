@@ -6,25 +6,11 @@ $deep-purple:rgba(113, 113, 131,1);
 $color5:rgba(113, 113, 131,1);
 
 
-* {
+*{
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Ubuntu', sans-serif;
-  overflow-x: hidden; ;
-  
-}
-
-html {
-  .grecaptcha-badge {
-    z-index: 999;
-  }
-}
-
-
-body{
-  max-width: 100%;
-  overflow: hidden;
 }
 
   a{

@@ -22,6 +22,8 @@ import ProcessBlock from "./ProcessBlock/ProcessBlock";
 
 import ApplyForm from "../../Form/ApplyForm";
 
+import Slovenia from "./Slovenia/Slovenia";
+
 import {Link as NavLink} from "react-router-dom";
 export default function Main() {
     const {t} = useTranslation();
@@ -54,6 +56,7 @@ export default function Main() {
             </motion.div>
         </main>
             <MainAbout />
+            <Slovenia />
             <WhoBlock />
             <ProcessBlock />
             <ApplyForm />

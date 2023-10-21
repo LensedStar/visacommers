@@ -3,6 +3,7 @@ import React from "react";
 
 import { Route, Routes} from "react-router-dom";
 
+import "./AppStyle.scss"
 
 import Header from "./Components/Header/Header";
 import Main from "./Components/Pages/MainPage/Main";
