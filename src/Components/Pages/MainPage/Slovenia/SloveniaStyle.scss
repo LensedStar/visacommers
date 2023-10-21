@@ -20,7 +20,7 @@
     align-content: center;
     justify-items: center;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 30px;
+    grid-column-gap: 5px;
     grid-row-gap: 0;
     background-color: rgba(255,255, 255, 0.65);
     font-weight: 600;
@@ -42,24 +42,25 @@
         width: 80px;
         height: 80px;
       @media (max-width: 900px){
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         padding: 0;
       }
     }
     h1{
       font-size: 1.3rem;
       font-weight: 900;
-      text-align: center;
+      text-align: start;
       margin: 10px 0;
       @media (max-width: 900px){
-       font-size: .8rem;
+       font-size: 1rem;
       }
     }
     p{
-      text-align: center;
+      text-align: start;
+      opacity: .75;
       @media screen and (max-width: 900px){
-        font-size: .7rem;
+        font-size: .9rem;
       }
 
       }
