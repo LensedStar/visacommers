@@ -54,13 +54,15 @@
       margin: 10px 0;
       @media (max-width: 900px){
        font-size: 1rem;
+        font-weight: 600;
       }
     }
     p{
+      font-weight: 400;
       text-align: start;
-      opacity: .6;
+      opacity: .8;
       @media screen and (max-width: 900px){
-        font-size: .9rem;
+        font-size: .8rem;
       }
 
       }

@@ -20,7 +20,7 @@ export default function Slovenia(){
             <span className="plusIcons">
                 <span className="plus">
                     <img src={Bank} alt="desclogo" />
-                    <h1>{t("mock.title")}</h1>
+                    <h1>СВОБОДА ПЕРЕДВИЖЕНИЯ</h1>
                     <p>{t("mock.question-long")}</p>
                 </span>
                 <span className="plus">
