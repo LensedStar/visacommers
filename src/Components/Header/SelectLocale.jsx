@@ -9,14 +9,14 @@ import ukFlag from "./images/ukFlag.png";
 import rusFlag from "./images/rusFlag.png";
 
 import uaFlag from "./images/uaFlag.png";
-import { motion } from "framer-motion";
-import {useScroll,useMotionValueEvent} from "framer-motion";
+
+
 
 
 export default function SelectLocale() {
     const [lang,setLang] = useState(localStorage.getItem("lang"))
 
-    const {i18n,t} = useTranslation();
+    const {i18n,} = useTranslation();
 
     const handleChange = (event) => {
         setLang(event.target.value);
@@ -39,24 +39,12 @@ export default function SelectLocale() {
         }
     },[])
 
-    const [showSelector,setShowSelector] = useState(false)
-    const {scrollY} = useScroll();
-    useMotionValueEvent(scrollY, "change", (latest) => {
-        latest > 500 ? setShowSelector(true) : setShowSelector(false)
-    })
+
     return(
-     <motion.div
+     <div
          className="localSelector"
-         variants={{
-             hidden:{height:0},
-             visible:{height:50}
-         }}
-         animate={showSelector ? "hidden":"visible" }
-            transition={{
-                duration: .5,
-            }}
+
      >
-         <p className="langTitle">{t("navigation.selectLang")}</p>
          <FormControl>
            <Select
            value = {lang}
@@ -87,6 +75,6 @@ export default function SelectLocale() {
                </MenuItem>
            </Select>
          </FormControl>
-     </motion.div>
+     </div>
     )
 }

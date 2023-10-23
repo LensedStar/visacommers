@@ -16,7 +16,7 @@ import SelectLocale from "./SelectLocale";
 
 import Button from "../Button/Button";
 
-import Logo from "./images/HeaderLogo.png";
+import Logo from "./images/huj1.jpg";
 //import Logo from "./images/HeaderLogo2.png";
 
 import {motion} from "framer-motion";
@@ -41,23 +41,23 @@ export default function Header() {
     return(
         <header>
         <nav className="nav">
-            <span className="localenLogo">
             <span className="headerLogo">
                 <Link to="/">
                     <img className="headerLogoImg" alt="logo" src={Logo}/>
                 </Link>
-                <p className="LogoText">Visa S<b className="love">love</b>nia</p>
             </span>
-            </span>
+            <span className="localenLogo">
+            <SelectLocale />
            <button className="dropDownButton" onClick={()=>handleDropDown()}>
-            <FontAwesomeIcon className="DropDown" icon={faBars} size="xl" style={{color:"black"}}/>
+            <FontAwesomeIcon className="DropDown" icon={faBars} size="xl" style={{color:"white"}}/>
            </button>
+            </span>
             <Drawer anchor="right" open={open} onClose={()=>handleDropDown()}
                     PaperProps={{
 
                         sx: {
                             height:"100vh",
-                            backgroundColor:"rgba(255, 255, 255,1)",
+                            backgroundColor:"rgba(0, 16, 32,1)",
                         }
                     }} >
                 <div className="Navigation">
@@ -83,7 +83,7 @@ export default function Header() {
                                           duration: .5,
                                       }}
                                   >
-                    <FontAwesomeIcon icon={faAngleDown}  style={{color: "#000000"}} />
+                    <FontAwesomeIcon icon={faAngleDown}  style={{color: "#ffffff"}} />
                 </motion.span>
                             </span>
                             <motion.div
@@ -110,23 +110,24 @@ export default function Header() {
                         <Link to="/contacts" ><p onClick={()=>handleDropDown()} className="navLink">{t("navigation.contacts")}</p></Link>
                     </span>
                     <button className="dropDownButton" onClick={()=>handleDropDown()}>
-                        <FontAwesomeIcon icon={faX} size="xl" style={{color:"black"}}/>
+                        <FontAwesomeIcon icon={faX} size="xl" style={{color:"white"}}/>
                     </button>
                     </article>
                     <article className="contacts">
                         <span className="number">
-                            <FontAwesomeIcon icon={faPhone} size="lg"/>
+                            <FontAwesomeIcon icon={faPhone} size="lg" color={"#ffffff"}/>
                             <a href="tel:+386 99 999 99 99">+380 99 999 99 99</a>
                         </span>
                         <span className="mail">
-                            <FontAwesomeIcon icon={faEnvelope} size="lg"/>
+                            <FontAwesomeIcon icon={faEnvelope} size="lg" color={"#ffffff"}/>
                             <a href = "mailto: abc@example.com">adc@example.com</a>
                         </span>
                         <Button
-                            content={<Link to="/aplication"><p className="navBtnText" >{t("navigation.apply")}</p></Link>}
+                            content={<Link to="/aplication"><p className="navBtnTextNav" >{t("navigation.apply")}</p></Link>}
                             style={{
                                 alignSelf : "center",
-                                marginTop:"40px"
+                                marginTop: "40px",
+                                backgroundColor: "rgba(255, 255,255,.5)",
                         }}
                             classN="navBtn"
                             action={()=>handleDropDown()}
@@ -135,7 +136,6 @@ export default function Header() {
                 </div>
             </Drawer>
         </nav>
-        <SelectLocale />
         </header>
     )
 }

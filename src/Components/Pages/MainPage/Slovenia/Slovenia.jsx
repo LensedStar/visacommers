@@ -21,9 +21,9 @@ export default function Slovenia(){
                 <span className="plus">
                     <img src={Bank} alt="desclogo" />
                     <h1>СВОБОДА ПЕРЕДВИЖЕНИЯ</h1>
-                    <p>{t("mock.question-long")}</p>
+                    <p>Жизнь в самом центре Европы</p>
                 </span>
-                <span className="plus">
+                <span className="plus right" >
                     <img src={Bussiness} alt="desclogo"/>
                     <h1>{t("mock.title")}</h1>
                     <p>{t("mock.question-long")}</p>
@@ -33,7 +33,7 @@ export default function Slovenia(){
                     <h1>{t("mock.title")}</h1>
                     <p>{t("mock.question-long")}</p>
                 </span>
-                <span className="plus">
+                <span className="plus right">
                     <img src={Eu} alt="desclogo"/>
                     <h1>{t("mock.title")}</h1>
                     <p>{t("mock.question-long")}</p>
@@ -43,20 +43,20 @@ export default function Slovenia(){
                     <h1>{t("mock.title")}</h1>
                     <p>{t("mock.question-long")}</p>
                 </span>
-                <span className="plus">
+                <span className="plus right">
                     <img src={Living} alt="desclogo"/>
                     <h1>{t("mock.title")}</h1>
                    <p>{t("mock.question-long")}</p>
                 </span>
-                <span className="plus">
+                <span className="plus ">
                     <img src={Safety} alt="desclogo"/>
                     <h1>{t("mock.title")}</h1>
                     <p>{t("mock.question-long")}</p>
                 </span>
-                <span className="plus">
+                <span className="plus right">
                     <img src={Visa} alt="desclogo"/>
                     <h1>{t("mock.title")}</h1>
-                    <p>{t("mock.question-long")}</p>
+                    <p>{t("mock.question-short")}</p>
                 </span>
             </span>
         </div>

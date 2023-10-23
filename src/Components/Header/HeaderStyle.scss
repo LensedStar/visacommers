@@ -29,7 +29,7 @@ header{
   margin: 0 0 0 0;
   padding: 0 10px;
   height: 50px;
-  background-color: $clr-1;
+  background-color: rgba(0, 16, 32,);
   z-index: 1000;
 
   .localenLogo{
@@ -57,7 +57,7 @@ header{
   justify-content: space-between;
   height: 100%;
   padding-bottom: 40%;
-  background-color: $clr-1;
+  background-color: rgba(0, 16, 32);
 
   .navDropdown{
     margin: 20px 0 0 0;
@@ -115,7 +115,7 @@ header{
         font-size: 1rem;
         padding: 10px 0;
         opacity: .7;
-        color: black;
+        color: white;
       }
     }
     .applyNow{
@@ -174,7 +174,8 @@ header{
 
       .navLink {
         font-size: 1.3rem;
-        opacity: .6;
+        opacity: 1;
+        color: white;
 
         &:visited {
           color: black;
@@ -184,22 +185,25 @@ header{
   }
 }
 .localSelector{
-  padding: 0 20px;
+  padding: 0 0 0 45px;
   width: 100%;
-  background-color: $clr-1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   .langTitle{
     opacity: .5;
   }
-}
-.navBtnText{
-  color: $clr-1!important;
+  .langSelector{
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
+.navBtnTextNav{
+  color: black!important;
+}
 .MuiFormControl-root{
   border-radius: 5px;
   border: none!important;
@@ -214,8 +218,8 @@ header{
   align-items: center;
   margin-right:30px;
   .headerLogoImg{
-    width: 80px;
-    height: 90px;
+    width: 65px;
+    height: 58px;
     position: relative;
     z-index: -9999;
   }
@@ -233,6 +237,7 @@ header{
   align-items: center;
   justify-content: center;
   align-self: start;
+  color: rgb(255,255,255);
   p {
     margin: 0 5px 0 0;
   }
@@ -243,6 +248,7 @@ header{
 }
 }
 
-.love{
-  color: rgb(255, 0, 0);
+.MuiList-root{
+  background-color:rgb(0, 16, 32);
 }
+
