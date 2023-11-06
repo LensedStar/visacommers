@@ -16,7 +16,7 @@ import SelectLocale from "./SelectLocale";
 
 import Button from "../Button/Button";
 
-import Logo from "./images/huj1.jpg";
+import Logo from "./images/logo.svg";
 //import Logo from "./images/HeaderLogo2.png";
 
 import {motion} from "framer-motion";

@@ -1,116 +1,94 @@
 
-$clr-1:rgb(250, 250, 250);
-$clr-2:rgb(121, 132, 139);
-$clr-3:rgb(0, 16, 32);
-$clr-4:rgb(130, 133, 142);
-$clr-5:rgb(52, 55, 66);
-$shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-
-.mainAboutContainer{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.main_about_block{
+  padding: 0 120px;
+  margin: 140px auto 100px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 220px;
+  height: 660px;
+  max-width:1440px;
   justify-content: center;
-  margin:0 0 100px 0;
-  .mainAboutLogo{
-    margin: 50px 0 0 0;
+  .main_about_desc_block{
   }
-
-}
-
-.about{
-  margin-top: 40px;
-  height: fit-content;
-  width: 100%;
-  display:flex;
-  flex-direction: column;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
-  @media screen and (min-width: 900px){
-    padding: 0 5%;
-    flex-direction: row;
-  }
-  .aboutText{
+  .main_about_header{
+    color: #00061C;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
     display: flex;
+    width: 600px;
+    height: 57px;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    border-radius: 10px;
-    background-color: $clr-4;
-    padding: 20px 20px;
-    width: 80%;
-    color: $clr-1;
-    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
-    margin-top: 50px;
-    background-position: center;
-    background-size: cover;
-    min-height:400px;
-    align-self: center;
-    @media screen and (min-width: 900px){
-      width: 70%;
-    }
-    @media screen and (min-width: 900px){
-      margin:0 30px ;
-    }
-
+    justify-content: flex-end;
+    margin: 0 0 35px 0;
   }
-  .aboutText1{
-    background-image: url("./MainAbouIMG/businessBlur.jpg");
-    @media screen and (max-width: 900px){
-      align-self: end;
-    }
-
-  }
-  .aboutText2{
-    align-self: start;
-    background-image: url("./MainAbouIMG/highBlur.jpg");
-    @media screen and (max-width: 900px){
-      align-self: start;
-    }
-  }
-  .aboutText3{
-    background-image: url("./MainAbouIMG/middleBlur.jpg")!important;
-  }
-  a{
-    width: 100%;
-  }
-  .aboutLink{
-    margin-top: 20px;
+  .main_about_desc{
+    color: #00061C;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
     display: flex;
-    justify-content: space-between;
-    padding: 10px 25px;
+    width: 800px;
+    height: 130px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 0 0 35px 0;
+  }
+  .main_about_picture{
+    display: flex;
+    flex-direction:column;
     align-items: center;
-    border-radius: 10px;
-    background-color: rgba(255,255,255,.45);
-    backdrop-filter: blur(5px);
-    box-shadow:rgba(0, 0, 0, 0.24) 0 3px 8px;
-    &:active{
-      background-color: rgba(255,255,255,1);
+    justify-content: center;
+    justify-self: end;
+    align-self: start;
+    .main_about_img{
+      width: 280px;
+      height: 420px;
+    }
+    .main_about_type_btns {
+      justify-self: end;
+      display: flex;
+      justify-content: space-between;
+      margin: 50px 0 0 0;
+      .main_select_btn_selected,
+      .main_select_btn{
+        margin:5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      .main_select_btn_selected {
+        border: none;
+        background:linear-gradient(to left, #00061C 50% , rgb(38, 44, 66) 50%);
+        background-size:200%;
+        background-position-x:100%;
+        width: 160px;
+        height: 40px;
+        p {
+          color: #FFF;
+          text-align: center;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 187.5%;
+        }
+      }
+      .main_select_btn {
+        width: 50px;
+        height: 40px;
+        background-color: #FFFFFF;
+        img{
+          width: 23.774px;
+          height: 28px;
+        }
+      }
+      }
     }
   }
-  a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    p{
-      color: black!important;
-    }
-    &:active{
-      color: black;
-    }
-  }
-  h2{
-    color: rgba(255,255,255,1);
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-  li{
-    color: rgba(255,255,255,1);
-    font-size: .9rem;
-    margin-bottom: 15px;
-    margin-left: 10px;
-  }
-}

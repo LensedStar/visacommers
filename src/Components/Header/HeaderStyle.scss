@@ -29,7 +29,7 @@ header{
   margin: 0 0 0 0;
   padding: 0 10px;
   height: 50px;
-  background-color: rgba(0, 16, 32,);
+  background-color: #00061C;
   z-index: 1000;
 
   .localenLogo{
@@ -57,7 +57,7 @@ header{
   justify-content: space-between;
   height: 100%;
   padding-bottom: 40%;
-  background-color: rgba(0, 16, 32);
+  background-color: rgba(0, 6, 28);
 
   .navDropdown{
     margin: 20px 0 0 0;
@@ -218,8 +218,8 @@ header{
   align-items: center;
   margin-right:30px;
   .headerLogoImg{
-    width: 65px;
-    height: 58px;
+    width: 200px;
+    height: 80px;
     position: relative;
     z-index: -9999;
   }

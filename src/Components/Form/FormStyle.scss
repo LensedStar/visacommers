@@ -10,7 +10,7 @@ $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display:flex;
   justify-content: center;
   align-content: center;
-  background-color: $clr-3;
+  background-color: rgba(0, 16, 32,1);
   width: 100%;
   min-height: 600px;
   padding: 50px 20px;
@@ -38,7 +38,8 @@ $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-right: 20px!important;
 }
   label{
-    font-size:.7rem
+    font-size:.7rem;
+    color:white;
   }
 }
 .sucsessContainer{

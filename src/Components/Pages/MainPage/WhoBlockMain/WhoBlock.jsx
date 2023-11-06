@@ -70,10 +70,11 @@ const handleMinus = () => {
                                  exit={{opacity:0,x:100}}
                                  transition={{
                                      duration: 0.3,
+                                     type:"spring",
                                  }}
                    >
                    <span className="icon">
-                       <FontAwesomeIcon icon={faGraduationCap} size="2xl" style={{color: "#343742",}}/>
+                       <FontAwesomeIcon icon={faGraduationCap} size="2xl" style={{color: "#343742"}}/>
                    </span>
                        <article className="variantDesc variantDesc2">
                            <h4>{t("mock.title")}</h4>
